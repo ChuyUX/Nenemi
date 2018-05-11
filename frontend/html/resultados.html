@@ -1,0 +1,549 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>Nenemi</title>
+	<!--
+	<link rel="shortcut icon" href="../img/icons/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="../img/icons/apple-touch-icon.png">
+	-->
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-expand-md">
+				<a class="navbar-brand" href="#"><img src="../img/nenemi-logo.svg" alt=""></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="exchange" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								USD
+							</a>
+							<div class="dropdown-menu" aria-labelledby="exchange">
+								<a class="dropdown-item" href="#">USD</a>
+								<a class="dropdown-item" href="#">MXN</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="languages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Eng
+							</a>
+							<div class="dropdown-menu" aria-labelledby="languages">
+								<a class="dropdown-item" href="#">Eng</a>
+								<a class="dropdown-item" href="#">Esp</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sign Up</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Log In</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	
+	<main>
+		<!-- BEGIN: Filters -->
+		<div class="container-bar">
+			<div class="container pt-4 pb-4">
+				<div class="filter">
+					<a href="#" class="btn btn-outline-primary filter__link">Destination</a>
+					<div class="filter__modal">
+						<form action="">
+							<div class="form-group form-check">
+						    <input type="checkbox" class="form-check-input" id="destiny_1">
+						    <label class="form-check-label" for="destiny_1">Cancún</label>
+						  </div>
+							<div class="form-group form-check">
+						    <input type="checkbox" class="form-check-input" id="destiny_2">
+						    <label class="form-check-label" for="destiny_2">Playa del Carmen</label>
+						  </div>
+							<div class="form-group form-check">
+						    <input type="checkbox" class="form-check-input" id="destiny_3">
+						    <label class="form-check-label" for="destiny_3">Ciudad de México</label>
+						  </div>
+							<div class="form-group form-check">
+						    <input type="checkbox" class="form-check-input" id="destiny_4">
+						    <label class="form-check-label" for="destiny_4">Monterrey</label>
+						  </div>
+							<div class="form-group form-check">
+						    <input type="checkbox" class="form-check-input" id="destiny_5">
+						    <label class="form-check-label" for="destiny_5">Puebla</label>
+						  </div>
+							<div class="row">
+								<div class="col"><a class="btn btn-link btn-link--off filter__modal-close">Cancel</a></div>
+								<div class="col text-right"><button type="submit" class="btn btn-link">Apply</button></div>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="filter">
+					<a href="#" class="btn btn-outline-primary filter__link">Category</a>
+				</div>
+				<div class="filter">
+					<a href="#" class="btn btn-outline-primary filter__link">Price</a>
+				</div>
+				<div class="filter">
+					<a href="#" class="btn btn-outline-primary filter__link">Availability</a>
+				</div>
+				<div class="filter">
+					<a href="#" class="btn btn-outline-primary filter__link">Sort by</a>
+				</div>
+			</div>
+		</div>
+		<!-- END: Filters -->
+		<!-- BEGIN: Results List -->
+		<div class="results-list">
+			<div class="container pt-5">
+				<h2 class="mb-3">33 resultados encontrados</h2>
+				<div class="card-deck">
+					<div class="card">
+						<div class="list-item__thumbnail-wrapper">
+							<a href="#" class="list-item__thumbnail">
+								<img src="../img/dummy/thumbnail-300x169-1@2x.jpg" class="img-fluid" alt="">
+								<span class="list-item__cat">Playa del Carmen</span>
+								<svg class="list-item__cat-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-play-rounded"></use></svg>
+							</a>
+							<div class="list-item__actions">
+								<a href="#" class="list-item__actions-item">
+									<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-share"></use></svg>
+								</a>
+								<a href="#" class="list-item__actions-item">
+									<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-love"></use></svg>
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Adrenalina Xcaret</h5>
+							<div class="list-item__meta mb-4">
+								<div class="list-item__meta-item">
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+								</div>
+								|
+								<div class="list-item__meta-item">265 booked</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="row">
+								<div class="col-sm"><h4 class="mb-1">$187 USD</h4></div>
+								<div class="col-sm text-right"><p class="list-price mb-0">$205 USD</p></div>
+							</div>
+							<div class="row align-items-end">
+								<div class="col-sm"><a href="#" class="btn btn-secondary">BOOK NOW</a></div>
+								<div class="col-sm text-right"><p class="mb-0 small">Available now</p></div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="list-item__thumbnail-wrapper">
+							<a href="#" class="list-item__thumbnail">
+								<img src="../img/dummy/thumbnail-300x169-2@2x.jpg" class="img-fluid" alt="">
+								<span class="list-item__cat">Mexico City</span>
+								<svg class="list-item__cat-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-play-rounded"></use></svg>
+							</a>
+							<div class="list-item__actions">
+								<a href="#" class="list-item__actions-item">
+									<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-share"></use></svg>
+								</a>
+								<a href="#" class="list-item__actions-item">
+									<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-love"></use></svg>
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Historical centre tour of Mexico City</h5>
+							<div class="list-item__meta mb-4">
+								<div class="list-item__meta-item">
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+								</div>
+								|
+								<div class="list-item__meta-item">265 booked</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="row">
+								<div class="col-sm"><h4 class="mb-1">$187 USD</h4></div>
+								<div class="col-sm text-right"><p class="list-price mb-0">$205 USD</p></div>
+							</div>
+							<div class="row align-items-end">
+								<div class="col-sm"><a href="#" class="btn btn-secondary">BOOK NOW</a></div>
+								<div class="col-sm text-right"><p class="mb-0 small">Available now</p></div>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="list-item__thumbnail-wrapper">
+							<a href="#" class="list-item__thumbnail">
+								<img src="../img/dummy/thumbnail-300x169-3@2x.jpg" class="img-fluid" alt="">
+								<span class="list-item__cat">Los Cabos</span>
+								<svg class="list-item__cat-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-play-rounded"></use></svg>
+							</a>
+							<div class="list-item__actions">
+								<a href="#" class="list-item__actions-item">
+									<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-share"></use></svg>
+								</a>
+								<a href="#" class="list-item__actions-item">
+									<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-love"></use></svg>
+								</a>
+							</div>
+						</div>
+						<div class="card-body">
+							<h5 class="card-title">Los Cabos Whale Watching Cruise Including Breakfast</h5>
+							<div class="list-item__meta mb-4">
+								<div class="list-item__meta-item">
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+									<svg class="rating list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+								</div>
+								|
+								<div class="list-item__meta-item">265 booked</div>
+							</div>
+						</div>
+						<div class="card-footer">
+							<div class="row">
+								<div class="col-sm"><h4 class="mb-1">$187 USD</h4></div>
+								<div class="col-sm text-right"><p class="list-price mb-0">$205 USD</p></div>
+							</div>
+							<div class="row align-items-end">
+								<div class="col-sm"><a href="#" class="btn btn-secondary">BOOK NOW</a></div>
+								<div class="col-sm text-right"><p class="mb-0 small">Available now</p></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="card-deck">
+									<div class="card">
+										<div class="list-item__thumbnail-wrapper">
+											<a href="#" class="list-item__thumbnail">
+												<img src="../img/dummy/thumbnail-300x169-1@2x.jpg" class="img-fluid" alt="">
+												<span class="list-item__cat">Playa del Carmen</span>
+												<svg class="list-item__cat-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-play-rounded"></use></svg>
+											</a>
+											<div class="list-item__actions">
+												<a href="#" class="list-item__actions-item">
+													<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-share"></use></svg>
+												</a>
+												<a href="#" class="list-item__actions-item">
+													<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-love"></use></svg>
+												</a>
+											</div>
+										</div>
+										<div class="card-body">
+											<h5 class="card-title">Adrenalina Xcaret</h5>
+											<div class="list-item__meta mb-4">
+												<div class="list-item__meta-item">
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+												</div>
+												|
+												<div class="list-item__meta-item">265 booked</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="row">
+												<div class="col-sm"><h4 class="mb-1">$187 USD</h4></div>
+												<div class="col-sm text-right"><p class="list-price mb-0">$205 USD</p></div>
+											</div>
+											<div class="row align-items-end">
+												<div class="col-sm"><a href="#" class="btn btn-secondary">BOOK NOW</a></div>
+												<div class="col-sm text-right"><p class="mb-0 small">Available now</p></div>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="list-item__thumbnail-wrapper">
+											<a href="#" class="list-item__thumbnail">
+												<img src="../img/dummy/thumbnail-300x169-2@2x.jpg" class="img-fluid" alt="">
+												<span class="list-item__cat">Mexico City</span>
+												<svg class="list-item__cat-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-play-rounded"></use></svg>
+											</a>
+											<div class="list-item__actions">
+												<a href="#" class="list-item__actions-item">
+													<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-share"></use></svg>
+												</a>
+												<a href="#" class="list-item__actions-item">
+													<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-love"></use></svg>
+												</a>
+											</div>
+										</div>
+										<div class="card-body">
+											<h5 class="card-title">Historical centre tour of Mexico City</h5>
+											<div class="list-item__meta mb-4">
+												<div class="list-item__meta-item">
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+												</div>
+												|
+												<div class="list-item__meta-item">265 booked</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="row">
+												<div class="col-sm"><h4 class="mb-1">$187 USD</h4></div>
+												<div class="col-sm text-right"><p class="list-price mb-0">$205 USD</p></div>
+											</div>
+											<div class="row align-items-end">
+												<div class="col-sm"><a href="#" class="btn btn-secondary">BOOK NOW</a></div>
+												<div class="col-sm text-right"><p class="mb-0 small">Available now</p></div>
+											</div>
+										</div>
+									</div>
+									<div class="card">
+										<div class="list-item__thumbnail-wrapper">
+											<a href="#" class="list-item__thumbnail">
+												<img src="../img/dummy/thumbnail-300x169-3@2x.jpg" class="img-fluid" alt="">
+												<span class="list-item__cat">Los Cabos</span>
+												<svg class="list-item__cat-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-play-rounded"></use></svg>
+											</a>
+											<div class="list-item__actions">
+												<a href="#" class="list-item__actions-item">
+													<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-share"></use></svg>
+												</a>
+												<a href="#" class="list-item__actions-item">
+													<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-love"></use></svg>
+												</a>
+											</div>
+										</div>
+										<div class="card-body">
+											<h5 class="card-title">Los Cabos Whale Watching Cruise Including Breakfast</h5>
+											<div class="list-item__meta mb-4">
+												<div class="list-item__meta-item">
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+													<svg class="rating list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+												</div>
+												|
+												<div class="list-item__meta-item">265 booked</div>
+											</div>
+										</div>
+										<div class="card-footer">
+											<div class="row">
+												<div class="col-sm"><h4 class="mb-1">$187 USD</h4></div>
+												<div class="col-sm text-right"><p class="list-price mb-0">$205 USD</p></div>
+											</div>
+											<div class="row align-items-end">
+												<div class="col-sm"><a href="#" class="btn btn-secondary">BOOK NOW</a></div>
+												<div class="col-sm text-right"><p class="mb-0 small">Available now</p></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+				<div class="card-deck">
+													<div class="card">
+														<div class="list-item__thumbnail-wrapper">
+															<a href="#" class="list-item__thumbnail">
+																<img src="../img/dummy/thumbnail-300x169-1@2x.jpg" class="img-fluid" alt="">
+																<span class="list-item__cat">Playa del Carmen</span>
+																<svg class="list-item__cat-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-play-rounded"></use></svg>
+															</a>
+															<div class="list-item__actions">
+																<a href="#" class="list-item__actions-item">
+																	<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-share"></use></svg>
+																</a>
+																<a href="#" class="list-item__actions-item">
+																	<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-love"></use></svg>
+																</a>
+															</div>
+														</div>
+														<div class="card-body">
+															<h5 class="card-title">Adrenalina Xcaret</h5>
+															<div class="list-item__meta mb-4">
+																<div class="list-item__meta-item">
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																</div>
+																|
+																<div class="list-item__meta-item">265 booked</div>
+															</div>
+														</div>
+														<div class="card-footer">
+															<div class="row">
+																<div class="col-sm"><h4 class="mb-1">$187 USD</h4></div>
+																<div class="col-sm text-right"><p class="list-price mb-0">$205 USD</p></div>
+															</div>
+															<div class="row align-items-end">
+																<div class="col-sm"><a href="#" class="btn btn-secondary">BOOK NOW</a></div>
+																<div class="col-sm text-right"><p class="mb-0 small">Available now</p></div>
+															</div>
+														</div>
+													</div>
+													<div class="card">
+														<div class="list-item__thumbnail-wrapper">
+															<a href="#" class="list-item__thumbnail">
+																<img src="../img/dummy/thumbnail-300x169-2@2x.jpg" class="img-fluid" alt="">
+																<span class="list-item__cat">Mexico City</span>
+																<svg class="list-item__cat-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-play-rounded"></use></svg>
+															</a>
+															<div class="list-item__actions">
+																<a href="#" class="list-item__actions-item">
+																	<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-share"></use></svg>
+																</a>
+																<a href="#" class="list-item__actions-item">
+																	<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-love"></use></svg>
+																</a>
+															</div>
+														</div>
+														<div class="card-body">
+															<h5 class="card-title">Historical centre tour of Mexico City</h5>
+															<div class="list-item__meta mb-4">
+																<div class="list-item__meta-item">
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																</div>
+																|
+																<div class="list-item__meta-item">265 booked</div>
+															</div>
+														</div>
+														<div class="card-footer">
+															<div class="row">
+																<div class="col-sm"><h4 class="mb-1">$187 USD</h4></div>
+																<div class="col-sm text-right"><p class="list-price mb-0">$205 USD</p></div>
+															</div>
+															<div class="row align-items-end">
+																<div class="col-sm"><a href="#" class="btn btn-secondary">BOOK NOW</a></div>
+																<div class="col-sm text-right"><p class="mb-0 small">Available now</p></div>
+															</div>
+														</div>
+													</div>
+													<div class="card">
+														<div class="list-item__thumbnail-wrapper">
+															<a href="#" class="list-item__thumbnail">
+																<img src="../img/dummy/thumbnail-300x169-3@2x.jpg" class="img-fluid" alt="">
+																<span class="list-item__cat">Los Cabos</span>
+																<svg class="list-item__cat-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-play-rounded"></use></svg>
+															</a>
+															<div class="list-item__actions">
+																<a href="#" class="list-item__actions-item">
+																	<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-share"></use></svg>
+																</a>
+																<a href="#" class="list-item__actions-item">
+																	<svg class="list-item__actions-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-love"></use></svg>
+																</a>
+															</div>
+														</div>
+														<div class="card-body">
+															<h5 class="card-title">Los Cabos Whale Watching Cruise Including Breakfast</h5>
+															<div class="list-item__meta mb-4">
+																<div class="list-item__meta-item">
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																	<svg class="rating list-item__meta-icon icon"><use xlink:href="../img/symbol-defs.svg#icon-star"></use></svg>
+																</div>
+																|
+																<div class="list-item__meta-item">265 booked</div>
+															</div>
+														</div>
+														<div class="card-footer">
+															<div class="row">
+																<div class="col-sm"><h4 class="mb-1">$187 USD</h4></div>
+																<div class="col-sm text-right"><p class="list-price mb-0">$205 USD</p></div>
+															</div>
+															<div class="row align-items-end">
+																<div class="col-sm"><a href="#" class="btn btn-secondary">BOOK NOW</a></div>
+																<div class="col-sm text-right"><p class="mb-0 small">Available now</p></div>
+															</div>
+														</div>
+													</div>
+												</div>
+												
+			</div>
+		</div>
+		<!-- END: Results List -->
+	</main>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md mb-3">
+					<img src="../img/nenemi-wlogo.svg" class="mb-4" alt="Nenemi">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Credits</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Become a provider</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md col-lg-5 mb-3">
+					<h4 class="mb-3">Subscribe to our newsletter</h4>
+					<form class="form-inline">
+						<input type="text" class="form-control" placeholder="Enter your email adress...">
+						<button type="submit" class="btn btn-primary">SUBMIT</button>
+					</form>
+				</div>
+				<div class="col-lg mb-3">
+					<h4 class="mb-3">Follow us</h4>
+					<nav class="social">
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-facebook-rounded"></use></svg>
+						</a>
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-twitter-rounded"></use></svg>
+						</a>
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-instagram-rounded"></use></svg>
+						</a>
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-youtube-rounded"></use></svg>
+						</a>
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-mail-rounded"></use></svg>
+						</a>
+					</nav>
+				</div>
+			</div>
+			<div class="text-center footer__bottom">
+				®Nenemi 2018. ©All rights reserved.  |  <a href="#">Terms of service</a>.  | <a href="#">Privacy policy</a>.
+			</div>
+		</div>
+	</footer>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/scripts.js"></script>
+	</body>
+	</html>
+	

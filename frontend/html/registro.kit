@@ -1,0 +1,51 @@
+<!-- @import "inc/head.kit" -->
+<body>
+	<!-- @import "inc/header.kit" -->
+	<main>
+		<!-- BEGIN: Login Form -->
+		<div class="pt-5 pb-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 offset-md-3">
+						<div class="text-center"><h2 class="mb-3">Registro</h2></div>
+						<div class="container-wrapper pt-5 pb-5 pr-5 pl-5">
+							<form class="mb-4">
+								<div class="form-group">
+									<label for="name">Name</label>
+									<input type="text" class="form-control" name="name" id="name">
+								</div>
+								<div class="form-group">
+									<label for="birthday">Birthday</label>
+									<input type="date" class="form-control" name="birthday" id="birthday">
+								</div>
+								<div class="form-group">
+									<label for="email">Email</label>
+									<input type="email" class="form-control" name="email" id="email">
+								</div>
+								<div class="form-group">
+									<label for="pass">Password</label>
+									<input type="password" class="form-control" name="pass" id="pass">
+								</div>
+								<div class="form-group">
+									<label for="confirm_pass">Confirm Password</label>
+									<input type="password" class="form-control" name="confirm_pass" id="confirm_pass">
+								</div>
+								<div class="form-check form-check-inline">
+								  <input class="form-check-input" type="checkbox" id="remember" value="1">
+								  <label class="form-check-label" for="remember">Recordar contraseña</label>
+								</div>
+								<button type="submit" class="btn btn-primary btn-block">Register</button>
+							</form>
+							<div class="text-center"><p class="mb-2">Or connect whit:</p></div>
+							<div class="row">
+								<div class="col-sm-6"><a href="#" class="btn btn-fb btn-sm btn-block">Registrate con Facebook</a></div>
+								<div class="col-sm-6"><a href="#" class="btn btn-wc btn-sm btn-block">Registrate con We Chat</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- END: Login Form -->
+	</main>
+	<!-- @import "inc/footer.kit" -->

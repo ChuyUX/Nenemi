@@ -1,0 +1,22 @@
+.card-deck .card{
+  margin-bottom: 32px;
+}
+.card .list-item__thumbnail-wrapper{
+  float: none;
+  margin-right: 0;
+  width: auto;
+}
+.card-title{
+  margin-bottom: 0;
+}
+.card-body{
+  padding: 15px;
+}
+.card-body .list-item__meta-item:first-child{
+  color: #B9B9B9;
+}
+.card-footer{
+  background: none;
+  border-top: none;
+  padding: 0 15px 15px;
+}

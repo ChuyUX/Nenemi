@@ -1,0 +1,12 @@
+header{
+  background: rgba(255,255,255,0.94);
+  border-bottom: 1px solid #D8D8D8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.home header{
+  background: none;
+  border-bottom: none;
+}

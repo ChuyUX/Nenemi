@@ -1,0 +1,38 @@
+footer{
+  background: #4D85C5;
+  padding: 50px 0 30px;
+}
+footer h4{
+  color: white;
+  font-family: $font-family-base;
+  font-weight: 700;
+}
+footer .nav-link{
+  color: white;
+  font-weight: 700;
+  padding: 2px 0;
+}
+footer .form-control{
+  border-color: white;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+footer .btn{
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  font-weight: 400;
+}
+footer .form-inline .form-control{
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+.footer__bottom{
+  font-weight: bold;
+}
+.footer__bottom, .footer__bottom a{
+  color: white;
+}
+.footer__bottom a:hover{
+  text-decoration: none;
+}

@@ -1,0 +1,25 @@
+.mainsrch-box{
+  background: white;
+  border-radius: 3px;
+  padding: 10px;
+  position: relative;
+}
+.mainsrch-box__input{
+  border: none;
+  color: #999;
+  font-size: $input-btn-font-size;
+  font-weight: bold;
+  padding-left: 45px;
+}
+.mainsrch-box__btn{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.mainsrch-box__icon{
+  color: #999;
+  font-size: 2rem;
+  left: 10px;
+  position: absolute;
+  top: 18px;
+}

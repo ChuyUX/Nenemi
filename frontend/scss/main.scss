@@ -1,0 +1,48 @@
+// Settings
+@import "1_settings/bootstrap/functions";
+@import "1_settings/bootstrap/variables";
+@import "1_settings/grid";
+@import "1_settings/palette";
+@import "1_settings/typography";
+@import "1_settings/forms";
+
+// Tools
+@import "2_tools/bootstrap/mixins";
+@import "2_tools/mixins";
+
+// Generic
+@import "3_generic/bootstrap/root";
+@import "3_generic/bootstrap/reboot";
+@import "3_generic/fonts";
+@import "3_generic/icons";
+
+// Base
+@import "4_base/bootstrap_master";
+@import "4_base/forms";
+
+// Objects
+@import "5_objects/bootstrap_master";
+@import "5_objects/layout";
+
+// Components
+@import "6_components/bootstrap_master";
+@import "6_components/slick/slick";
+@import "6_components/slick/slick-theme";
+@import "6_components/buttons";
+@import "6_components/header";
+@import "6_components/navbar";
+@import "6_components/main-stage";
+@import "6_components/mainsrch-box";
+@import "6_components/footer";
+@import "6_components/social";
+@import "6_components/grid-item";
+@import "6_components/list-item";
+@import "6_components/posts-carousel";
+@import "6_components/stages";
+@import "6_components/containers";
+@import "6_components/card";
+@import "6_components/filter";
+
+// Trumps
+@import "7_trumps/bootstrap_master";
+@import "7_trumps/utilities";

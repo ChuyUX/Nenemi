@@ -1,0 +1,55 @@
+.main-stage{
+  background-image: url(../img/dummy/banner-1280x720-1.jpg);
+  @extend %bg-cover;
+  height: 100vh;
+}
+.main-stage:before{
+  background: -webkit-linear-gradient(rgba(245,245,245,1) 0%, rgba(245,245,245,0) 100%);
+  background: -o-linear-gradient(rgba(245,245,245,1) 0%, rgba(245,245,245,0) 100%);
+  background: linear-gradient(rgba(245,245,245,1) 0%, rgba(245,245,245,0) 100%);
+  content: " ";
+  height: 25vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.main-stage:after{
+  background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+  background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 10%);
+  background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.75) 100%);
+  content: " ";
+  height: 20vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.main-stage .container, .main-stage .row{
+  height: 100%;
+}
+.main-stage__title{
+  color: white;
+  line-height: 1;
+  margin-bottom: 15px;
+}
+.main-stage__nav{
+  bottom: 20px;
+  color: white;
+  font-size: $input-btn-font-size;
+  font-weight: bold;
+  left: 50%;
+  margin-left: -50px;
+  position: absolute;
+  text-align: center;
+  width: 100px;
+  z-index: 1;
+}
+.main-stage__nav-item{
+  color: white;
+  display: inline-block;
+  margin-top: 3px;
+}
+.main-stage__nav-icon{
+  opacity: 0.8;
+  width: 32px;
+  height: 32px;
+}
