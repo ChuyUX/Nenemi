@@ -1,0 +1,242 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>Nenemi</title>
+	<!--
+	<link rel="shortcut icon" href="../img/icons/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="../img/icons/apple-touch-icon.png">
+	-->
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<nav class="navbar navbar-expand-md">
+				<a class="navbar-brand" href="#"><img src="../img/nenemi-logo.svg" alt=""></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="exchange" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								USD
+							</a>
+							<div class="dropdown-menu" aria-labelledby="exchange">
+								<a class="dropdown-item" href="#">USD</a>
+								<a class="dropdown-item" href="#">MXN</a>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="languages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Eng
+							</a>
+							<div class="dropdown-menu" aria-labelledby="languages">
+								<a class="dropdown-item" href="#">Eng</a>
+								<a class="dropdown-item" href="#">Esp</a>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Sign Up</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Log In</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</header>
+	
+	<main>
+		<div class="row no-gutters">
+			<div class="col-md-3 col-lg-2 dashboard__sidebar">
+				<div class="dashboard__sidebar-wrapper">
+					<ul class="nav flex-column dashboard__nav">
+					  <li class="nav-item">
+					    <a class="nav-link dashboard__nav-item" href="#">Profile</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link dashboard__nav-item" href="#">Wishlist</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link dashboard__nav-item" href="#">Bookings</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link dashboard__nav-item dashboard__nav-item--active" href="#">Settings</a>
+					  </li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-9 col-lg-10">
+				<div class="dashboard">
+					<div class="dashboard__headline">
+						<h3>Settings</h3>
+					</div>
+					<div class="dashboard__content">
+						<form action="#">
+							<h4 class="featured-heading">Language currency</h4>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="language">Default language</label>
+										<select class="custom-select" name="language" id="language">
+											<option selected>Seleccionar</option>
+											<option value="1">English</option>
+											<option value="2">Japanese</option>
+											<option value="3">Chinese</option>
+											<option value="4">Corean</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label for="language">Default currency</label>
+										<select class="custom-select" name="language" id="language">
+											<option selected>Seleccionar</option>
+											<option value="1">US Dollar</option>
+											<option value="2">Yen</option>
+											<option value="3">Mexican Peso</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<h4 class="featured-heading">Payment method</h4>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="payment_method">Payment method</label>
+										<select class="custom-select" name="payment_method" id="payment_method">
+											<option selected>Seleccionar</option>
+											<option value="paypal">Paypal</option>
+											<option value="wechat">We Chat</option>
+											<option value="alipay">Alipay</option>
+											<option value="visamastercard">Visa / Mastercard Card</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="js-visamastercard" style="display:none;">
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="cardholder">Cardholder's Name</label>
+											<input type="text" class="form-control" name="cardholder" id="cardholder">
+										</div>
+									</div>
+								</div>
+								<div class="form-row">
+						    <div class="col-md-6">
+									<div class="form-group">
+										<label for="card_number">Card Number</label>
+						      	<input type="text" class="form-control" name="card_number" id="card_number">
+									</div>
+						    </div>
+						    <div class="col-xs-3">
+									<div class="form-group">
+										<div class="form-group">
+											<label for="card_month">Month</label>
+											<select class="custom-select" name="card_month" id="card_month">
+												<option selected>Seleccionar</option>
+												<option value="1">January</option>
+												<option value="2">February</option>
+												<option value="3">March</option>
+												<option value="4">April</option>
+												<option value="5">May</option>
+												<option value="6">June</option>
+												<option value="7">July</option>
+												<option value="8">August</option>
+												<option value="9">September</option>
+												<option value="10">October</option>
+												<option value="11">November</option>
+												<option value="12">December</option>
+											</select>
+										</div>
+									</div>
+						    </div>
+								<div class="col-xs-3">
+									<div class="form-group">
+										<div class="form-group">
+											<label for="card_year">Year</label>
+											<select class="custom-select" name="card_year" id="card_year">
+												<option selected>Seleccionar</option>
+												<option value="2018">2018</option>
+												<option value="2019">2019</option>
+												<option value="2020">2020</option>
+												<option value="2021">2021</option>
+												<option value="2022">2022</option>
+												<option value="2023">2023</option>
+											</select>
+										</div>
+									</div>
+						    </div>
+						  </div>
+							</div>
+							<button type="submit" class="btn btn-primary">Save</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md mb-3">
+					<img src="../img/nenemi-wlogo.svg" class="mb-4" alt="Nenemi">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Credits</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">About us</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Become a provider</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md col-lg-5 mb-3">
+					<h4 class="mb-3">Subscribe to our newsletter</h4>
+					<form class="form-inline">
+						<input type="text" class="form-control" placeholder="Enter your email adress...">
+						<button type="submit" class="btn btn-primary">SUBMIT</button>
+					</form>
+				</div>
+				<div class="col-lg mb-3">
+					<h4 class="mb-3">Follow us</h4>
+					<nav class="social">
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-facebook-rounded"></use></svg>
+						</a>
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-twitter-rounded"></use></svg>
+						</a>
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-instagram-rounded"></use></svg>
+						</a>
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-youtube-rounded"></use></svg>
+						</a>
+						<a href="#" class="social__item">
+							<svg class="icon social__icon"><use xlink:href="../img/symbol-defs.svg#icon-mail-rounded"></use></svg>
+						</a>
+					</nav>
+				</div>
+			</div>
+			<div class="text-center footer__bottom">
+				®Nenemi 2018. ©All rights reserved.  |  <a href="#">Terms of service</a>.  | <a href="#">Privacy policy</a>.
+			</div>
+		</div>
+	</footer>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/slick.min.js"></script>
+	<script src="../js/scripts.js"></script>
+	</body>
+	</html>
+	

@@ -1,0 +1,13 @@
+.wishlist-carousel__item{
+  margin: 0 10px;
+}
+.wishlist-carousel .slick-dots li button{
+  background: #9B9B9B;
+  border-radius: 50%;
+}
+.wishlist-carousel .slick-dots li button:before{
+  content: " ";
+}
+.wishlist-carousel .slick-dots li.slick-active button{
+  background: $primary;
+}

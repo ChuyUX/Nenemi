@@ -2,6 +2,11 @@
   font-size: $input-btn-font-size;
   font-weight: bold;
 }
+.btn > .icon{
+  margin-left: 8px;
+  position: relative;
+  top: calc(50% - .5rem);
+}
 .btn-sm{
   font-size: 13px;
   font-weight: normal;

@@ -22,6 +22,11 @@ $('.js-centeritem').slick({
   centerPadding: ($(window).width() - $('.navbar').width()) / 2+'px'
 });
 
+$('.wishlist-carousel').slick({
+  arrows: false,
+  dots: true
+});
+
 $('.filter a').click(function(){
   if($(this).hasClass('btn-outline-primary')){
     $('.results-list').addClass('results-list--overlay');
@@ -45,4 +50,18 @@ $('.filter__modal-close').click(function(){
   }
   $(this).parents('.filter__modal').hide();
   return false;
+});
+
+$('.js-toggle-profile-edit').click(function(){
+  $('.js-profile-display').toggle();
+  $('.js-profile-edit').toggle();
+  return false;
+});
+
+$('#payment_method').change(function(){
+  if($(this).val() === 'visamastercard'){
+    $('.js-visamastercard').show();
+  } else {
+    $('.js-visamastercard').hide();
+  }
 });
