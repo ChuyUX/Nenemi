@@ -32,7 +32,7 @@ Theme My Login will always look in your theme's directory first, before using th
                 </div>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" name="rememberme" type="checkbox" id="rememberme<?php $template->the_instance(); ?>" value="forever">
-                  <label class="form-check-label" for="remember">Recordar contraseña</label>
+                  <label class="form-check-label" for="rememberme">Recordar contraseña</label>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
               </form>

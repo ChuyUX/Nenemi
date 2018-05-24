@@ -18,8 +18,12 @@ Theme My Login will always look in your theme's directory first, before using th
 					<div class="container-wrapper pt-5 pb-5 pr-5 pl-5">
 						<form class="mb-4" name="registerform" id="registerform<?php $template->the_instance(); ?>" action="<?php $template->the_action_url( 'register', 'login_post' ); ?>" method="post">
 							<div class="form-group">
-								<label for="name">Name</label>
-								<input type="text" class="form-control" name="user_login" id="user_login<?php $template->the_instance(); ?>"  value="<?php $template->the_posted_value( 'user_login' ); ?>">
+								<label for="name">First Name</label>
+								<input type="text" class="form-control" name="first_name" id="first_name<?php $template->the_instance(); ?>"  value="<?php $template->the_posted_value( 'first_name' ); ?>">
+							</div>
+							<div class="form-group">
+								<label for="name">Last Name</label>
+								<input type="text" class="form-control" name="last_name" id="last_name<?php $template->the_instance(); ?>"  value="<?php $template->the_posted_value( 'last_name' ); ?>">
 							</div>
 							<div class="form-group">
 								<label for="birthday">Birthday</label>
@@ -39,7 +43,7 @@ Theme My Login will always look in your theme's directory first, before using th
 							</div>
 							<div class="form-check form-check-inline">
 							  <input class="form-check-input" type="checkbox" name="rememberme" id="rememberme<?php $template->the_instance(); ?>" value="forever">
-							  <label class="form-check-label" for="remember">Recordar contraseña</label>
+							  <label class="form-check-label" for="rememberme">Recordar contraseña</label>
 							</div>
 							<button type="submit" class="btn btn-primary btn-block" name="wp-submit" id="wp-submit<?php $template->the_instance(); ?>" value="<?php esc_attr_e( 'Register', 'theme-my-login' ); ?>">Register</button>			
 							<input type="hidden" name="redirect_to" value="<?php $template->the_redirect_url( 'register' ); ?>" />
