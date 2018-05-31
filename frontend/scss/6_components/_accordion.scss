@@ -35,3 +35,6 @@
   color: $headings-color;
   content: "\e900";
 }
+.accordion--edit .accordion__btn-text{
+  opacity: 0;
+}
