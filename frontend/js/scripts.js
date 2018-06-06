@@ -74,7 +74,7 @@ $(function () {
       arrows: false,
       dots: true
     });
-  })
+  });
 
   $('.js-edit-lists').click(function(){
     $('#accordion').addClass('accordion--edit');
@@ -90,4 +90,61 @@ $(function () {
     return false;
   });
 
-})
+  if($('.sticky-scroll-box').length > 0){
+    var sticky_item = $('.sticky-scroll-box');
+    var top = sticky_item.offset().top;
+    $(window).scroll(function () {
+      var y = $(this).scrollTop();
+      var z = sticky_item.parent();
+      if (y >= top){
+        sticky_item.width(sticky_item.parent().width());
+        sticky_item.addClass('sticky-scroll-box--fixed');
+        if(y >= (z.height() + z.offset().top - sticky_item.height())){
+          sticky_item.removeClass('sticky-scroll-box--fixed');
+          sticky_item.width('auto');
+        }
+      }else{
+        sticky_item.removeClass('sticky-scroll-box--fixed');
+        sticky_item.width('auto');
+      }
+
+    });
+  }
+
+  $('.js-gallery-item').magnificPopup({
+    type: 'image',
+    gallery:{
+      enabled:true
+    }
+  });
+
+  $('.js-popup-youtube').magnificPopup({
+    type: 'iframe'
+  });
+
+  $('[data-toggle="datepicker"]').datepicker();
+
+  $('.scroll-to').each(function(){
+    $(this).click(function(){
+        $('html,body').animate({ scrollTop: $($(this).attr('href')).position().top }, 'slow');
+        return false;
+    });
+  });
+
+  $('.featured-posts').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          centerPadding: '20px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
+});

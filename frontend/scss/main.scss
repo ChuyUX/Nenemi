@@ -19,6 +19,7 @@
 // Base
 @import "4_base/bootstrap_master";
 @import "4_base/forms";
+@import "4_base/type";
 
 // Objects
 @import "5_objects/bootstrap_master";
@@ -28,6 +29,8 @@
 @import "6_components/bootstrap_master";
 @import "6_components/slick/slick";
 @import "6_components/slick/slick-theme";
+@import "6_components/magnific-popup/magnific-popup";
+@import "6_components/datepicker/datepicker";
 @import "6_components/buttons";
 @import "6_components/custom-forms";
 @import "6_components/featured-heading";
@@ -47,6 +50,15 @@
 @import "6_components/filter";
 @import "6_components/dashboard";
 @import "6_components/wishlist-carousel";
+@import "6_components/hero";
+@import "6_components/review";
+@import "6_components/post";
+@import "6_components/panel";
+@import "6_components/pagination";
+@import "6_components/widget";
+@import "6_components/featured-posts";
+@import "6_components/single";
+@import "6_components/breadcrumb";
 
 // Trumps
 @import "7_trumps/bootstrap_master";
