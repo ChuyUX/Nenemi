@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/*
+Theme Name: Nenemi
+Theme URI:
+Author: Neomediax
+Author URI: http://neomediax.com
+Description: Tema para la campaña de Midea
+Tags: Blank, HTML5, CSS3
+Version: 1.0
+License: MIT
+License URI: http://opensource.org/licenses/mit-license.php
+
+*/
+
+.woocommerce-message,.woocommerce-error{
+	margin-bottom:0!important;
+}

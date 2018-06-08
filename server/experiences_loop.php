@@ -1,8 +1,3 @@
-<?php 
-if (have_posts()): while (have_posts()) : the_post();
- ?>
-
-	<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class('card'); ?> >
 			<div class="list-item__thumbnail-wrapper">
 				<a href="#" class="list-item__thumbnail">
@@ -44,16 +39,3 @@ if (have_posts()): while (have_posts()) : the_post();
 				</div>
 			</div>
 		</div>
-	<?php endif; ?>
-
-<?php endwhile; ?>
-
-<?php else: ?>
-
-	<!-- article -->
-	<article>
-		<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-	</article>
-	<!-- /article -->
-
-<?php endif; ?>
