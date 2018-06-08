@@ -11,3 +11,25 @@
 .wishlist-carousel .slick-dots li.slick-active button{
   background: $primary;
 }
+.wishlist__edit{
+  align-items: center;
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 15px;
+  width: 80%;
+}
+.wishlist__delete{
+  display: inline-block;
+  font-size: 1.9rem;
+  line-height: 0.75;
+}
+.wishlist__input{
+  background: #f5f5f5;
+  border: none;
+  margin-left: 10px;
+  width: 50%;
+}
+.accordion--edit .wishlist__edit{
+  display: flex;
+}

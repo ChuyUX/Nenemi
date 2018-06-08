@@ -21,6 +21,9 @@
   text-align: left;
   width: 100%;
 }
+.accordion__btn--small{
+  font-size: $h5-font-size;
+}
 .accordion .card-header .accordion__btn:after{
   color: $primary;
   content: "\e901";
@@ -34,4 +37,7 @@
 .accordion .card-header .accordion__btn[aria-expanded="true"]:after{
   color: $headings-color;
   content: "\e900";
+}
+.accordion--edit .accordion__btn-text{
+  opacity: 0;
 }

@@ -45,6 +45,12 @@
 .dashboard__content{
   padding: 30px 30px 100px;
 }
+.dashboard__actions{
+  display: none;
+}
+.dashboard__content--actions .dashboard__actions{
+  display: block;
+}
 .dashboard__content--bg{
   @extend %bg-cover;
   position: relative;
@@ -53,6 +59,23 @@
   @extend %overlay;
   background: rgba(0,0,0,0.5);
   content: " ";
+}
+.dashboard__sidebtn{
+  margin: 0;
+  position: relative;
+}
+.dashboard__sidebtn .form-control{
+  font-size: $font-size-sm;
+  padding: 5px 10px;
+}
+.dashboard__sidebtn button{
+  background: none;
+  border: none;
+  color: #979797;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 6px;
 }
 
 .profile{
