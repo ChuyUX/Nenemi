@@ -56,7 +56,7 @@
 	
 	<main>
 		<div class="hero" style="background-image:url(../img/dummy/banner-1280x473.jpg);">
-			<div class="container-fluid">
+			<div class="container">
 				<div class="row align-items-end hero__actions">
 					<div class="col">
 						<a href="../img/dummy/gallery-1200x800-1.jpg" class="btn btn-sm btn-sm-icon btn-light js-gallery-item">
@@ -168,183 +168,172 @@
 						<div class="row">
 							<div class="col-md-8"><h3 class="mb-3">Package options</h3></div>
 							<div class="col-md-4 text-right">
+								<!--
 								<button class="btn btn-primary btn-sm mb-3 btn-block" data-toggle="datepicker">
 									<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-calendar"></use></svg>
 									Check availability
 								</button>
+							-->
 							</div>
 						</div>
-						<div class="panel mb-3">
-							<div class="panel__header">
-								<div class="panel__header-col">
-									<h5 class="mb-0">Paraxute</h5>
-									<a href="#p1_details" data-toggle="collapse">View package details <svg class="icon small"><use xlink:href="../img/symbol-defs.svg#icon-arrow-down"></use></svg></a>
-								</div>
-								<div class="panel__header-col">
-									<div class="text-right">
-										<h5 class="mb-0">$120 USD</h5>
-										<p class="list-price mb-0">$205 USD</p>
+						<div class="pckg-wrappper">
+							<div class="panel mb-3">
+								<div class="panel__header">
+									<div class="panel__header-col">
+										<h5 class="mb-0">Paraxute</h5>
+										<a href="#p1_details" data-toggle="collapse" class="js-view-pckg">View package details <svg class="icon small"><use xlink:href="../img/symbol-defs.svg#icon-arrow-down"></use></svg></a>
 									</div>
-									<div class="ml-3">
-										<a href="#p1_book" class="btn btn-sm btn-outline-primary" data-toggle="collapse">SELECT</a>
+									<div class="panel__header-col">
+										<div class="text-right">
+											<h5 class="mb-0">$120 USD</h5>
+											<p class="list-price mb-0">$205 USD</p>
+										</div>
+										<div class="ml-3">
+											<a href="#" class="btn btn-sm btn-outline-primary js-select-pckg">SELECT</a>
+										</div>
 									</div>
 								</div>
-							</div>
-							<div class="panel__content">
-								<div id="p1_details" class="collapse pt-2">
-									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, at excepturi, dolores reprehenderit doloremque aspernatur. Distinctio, veniam, fugiat. Voluptatem odit nulla optio cupiditate veniam asperiores harum voluptatibus consequatur neque, error.</p>
-								</div>
-								<div id="p1_book" class="collapse pt-2">
-									<div class="row">
-										<div class="col-sm-7">
-											<div class="form-group">
-												<label for="date">Select date</label>
-												<div class="input-group">
-													<input type="text" class="form-control" name="date" id="date" data-toggle="datepicker">
-													<div class="input-group-append">
-														<span class="input-group-text" id="inputGroupPrepend">
-															<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-calendar"></use></svg>
-														</span>
+								<div class="panel__content">
+									<div id="p1_details" class="collapse pt-2">
+										<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, at excepturi, dolores reprehenderit doloremque aspernatur. Distinctio, veniam, fugiat. Voluptatem odit nulla optio cupiditate veniam asperiores harum voluptatibus consequatur neque, error.</p>
+									</div>
+									<div class="panel__content-select pt-2">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, at excepturi, dolores reprehenderit doloremque aspernatur. Distinctio, veniam, fugiat. Voluptatem odit nulla optio cupiditate veniam asperiores harum voluptatibus consequatur neque, error.</p>
+										<div class="row">
+											<div class="col-sm-7">
+												<div class="form-group">
+													<label for="date">Select date</label>
+													<div class="input-group">
+														<input type="text" class="form-control" name="date" id="date" data-toggle="datepicker">
+														<div class="input-group-append">
+															<span class="input-group-text" id="inputGroupPrepend">
+																<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-calendar"></use></svg>
+															</span>
+														</div>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="quantity">Package Quantity</label>
+													<div class="input-group">
+														<input type="number" class="form-control" name="quantity" id="quantity" min="0">
+														<div class="input-group-append">
+															<span class="input-group-text" id="inputGroupPrepend">
+																<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-traveler"></use></svg>
+															</span>
+														</div>
 													</div>
 												</div>
 											</div>
-											<div class="form-group">
-												<label for="quantity">Package Quantity</label>
-												<div class="input-group">
-													<input type="number" class="form-control" name="quantity" id="quantity" min="0">
-													<div class="input-group-append">
-														<span class="input-group-text" id="inputGroupPrepend">
-															<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-traveler"></use></svg>
-														</span>
-													</div>
-												</div>
-											</div>
-											<h6>Inclusive Of:</h6>
-											<ul>
-												<li>Admission to the chocolate "touch" zone with opportunities to hold real chocolate art objects</li>
-												<li>Educational video lesson on chocolate</li>
-												<li>Swiss chocolate tasting and sampling</li>
-											</ul>
 										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-						
-						<div class="panel mb-3">
-													<div class="panel__header">
-														<div class="panel__header-col">
-															<h5 class="mb-0">Paraxute</h5>
-															<a href="#p1_details" data-toggle="collapse">View package details <svg class="icon small"><use xlink:href="../img/symbol-defs.svg#icon-arrow-down"></use></svg></a>
-														</div>
-														<div class="panel__header-col">
-															<div class="text-right">
-																<h5 class="mb-0">$120 USD</h5>
-																<p class="list-price mb-0">$205 USD</p>
+							
+							<div class="panel mb-3">
+															<div class="panel__header">
+																<div class="panel__header-col">
+																	<h5 class="mb-0">Paraxute</h5>
+																	<a href="#p1_details" data-toggle="collapse" class="js-view-pckg">View package details <svg class="icon small"><use xlink:href="../img/symbol-defs.svg#icon-arrow-down"></use></svg></a>
+																</div>
+																<div class="panel__header-col">
+																	<div class="text-right">
+																		<h5 class="mb-0">$120 USD</h5>
+																		<p class="list-price mb-0">$205 USD</p>
+																	</div>
+																	<div class="ml-3">
+																		<a href="#" class="btn btn-sm btn-outline-primary js-select-pckg">SELECT</a>
+																	</div>
+																</div>
 															</div>
-															<div class="ml-3">
-																<a href="#p1_book" class="btn btn-sm btn-outline-primary" data-toggle="collapse">SELECT</a>
-															</div>
-														</div>
-													</div>
-													<div class="panel__content">
-														<div id="p1_details" class="collapse pt-2">
-															<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, at excepturi, dolores reprehenderit doloremque aspernatur. Distinctio, veniam, fugiat. Voluptatem odit nulla optio cupiditate veniam asperiores harum voluptatibus consequatur neque, error.</p>
-														</div>
-														<div id="p1_book" class="collapse pt-2">
-															<div class="row">
-																<div class="col-sm-7">
-																	<div class="form-group">
-																		<label for="date">Select date</label>
-																		<div class="input-group">
-																			<input type="text" class="form-control" name="date" id="date" data-toggle="datepicker">
-																			<div class="input-group-append">
-																				<span class="input-group-text" id="inputGroupPrepend">
-																					<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-calendar"></use></svg>
-																				</span>
+															<div class="panel__content">
+																<div id="p1_details" class="collapse pt-2">
+																	<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, at excepturi, dolores reprehenderit doloremque aspernatur. Distinctio, veniam, fugiat. Voluptatem odit nulla optio cupiditate veniam asperiores harum voluptatibus consequatur neque, error.</p>
+																</div>
+																<div class="panel__content-select pt-2">
+																	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, at excepturi, dolores reprehenderit doloremque aspernatur. Distinctio, veniam, fugiat. Voluptatem odit nulla optio cupiditate veniam asperiores harum voluptatibus consequatur neque, error.</p>
+																	<div class="row">
+																		<div class="col-sm-7">
+																			<div class="form-group">
+																				<label for="date">Select date</label>
+																				<div class="input-group">
+																					<input type="text" class="form-control" name="date" id="date" data-toggle="datepicker">
+																					<div class="input-group-append">
+																						<span class="input-group-text" id="inputGroupPrepend">
+																							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-calendar"></use></svg>
+																						</span>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="form-group">
+																				<label for="quantity">Package Quantity</label>
+																				<div class="input-group">
+																					<input type="number" class="form-control" name="quantity" id="quantity" min="0">
+																					<div class="input-group-append">
+																						<span class="input-group-text" id="inputGroupPrepend">
+																							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-traveler"></use></svg>
+																						</span>
+																					</div>
+																				</div>
 																			</div>
 																		</div>
 																	</div>
-																	<div class="form-group">
-																		<label for="quantity">Package Quantity</label>
-																		<div class="input-group">
-																			<input type="number" class="form-control" name="quantity" id="quantity" min="0">
-																			<div class="input-group-append">
-																				<span class="input-group-text" id="inputGroupPrepend">
-																					<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-traveler"></use></svg>
-																				</span>
-																			</div>
-																		</div>
-																	</div>
-																	<h6>Inclusive Of:</h6>
-																	<ul>
-																		<li>Admission to the chocolate "touch" zone with opportunities to hold real chocolate art objects</li>
-																		<li>Educational video lesson on chocolate</li>
-																		<li>Swiss chocolate tasting and sampling</li>
-																	</ul>
 																</div>
 															</div>
 														</div>
-													</div>
-												</div>
-												
-						<div class="panel mb-3">
-																			<div class="panel__header">
-																				<div class="panel__header-col">
-																					<h5 class="mb-0">Paraxute</h5>
-																					<a href="#p1_details" data-toggle="collapse">View package details <svg class="icon small"><use xlink:href="../img/symbol-defs.svg#icon-arrow-down"></use></svg></a>
-																				</div>
-																				<div class="panel__header-col">
-																					<div class="text-right">
-																						<h5 class="mb-0">$120 USD</h5>
-																						<p class="list-price mb-0">$205 USD</p>
-																					</div>
-																					<div class="ml-3">
-																						<a href="#p1_book" class="btn btn-sm btn-outline-primary" data-toggle="collapse">SELECT</a>
-																					</div>
-																				</div>
-																			</div>
-																			<div class="panel__content">
-																				<div id="p1_details" class="collapse pt-2">
-																					<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, at excepturi, dolores reprehenderit doloremque aspernatur. Distinctio, veniam, fugiat. Voluptatem odit nulla optio cupiditate veniam asperiores harum voluptatibus consequatur neque, error.</p>
-																				</div>
-																				<div id="p1_book" class="collapse pt-2">
-																					<div class="row">
-																						<div class="col-sm-7">
-																							<div class="form-group">
-																								<label for="date">Select date</label>
-																								<div class="input-group">
-																									<input type="text" class="form-control" name="date" id="date" data-toggle="datepicker">
-																									<div class="input-group-append">
-																										<span class="input-group-text" id="inputGroupPrepend">
-																											<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-calendar"></use></svg>
-																										</span>
+														
+							<div class="panel mb-3">
+																						<div class="panel__header">
+																							<div class="panel__header-col">
+																								<h5 class="mb-0">Paraxute</h5>
+																								<a href="#p1_details" data-toggle="collapse" class="js-view-pckg">View package details <svg class="icon small"><use xlink:href="../img/symbol-defs.svg#icon-arrow-down"></use></svg></a>
+																							</div>
+																							<div class="panel__header-col">
+																								<div class="text-right">
+																									<h5 class="mb-0">$120 USD</h5>
+																									<p class="list-price mb-0">$205 USD</p>
+																								</div>
+																								<div class="ml-3">
+																									<a href="#" class="btn btn-sm btn-outline-primary js-select-pckg">SELECT</a>
+																								</div>
+																							</div>
+																						</div>
+																						<div class="panel__content">
+																							<div id="p1_details" class="collapse pt-2">
+																								<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, at excepturi, dolores reprehenderit doloremque aspernatur. Distinctio, veniam, fugiat. Voluptatem odit nulla optio cupiditate veniam asperiores harum voluptatibus consequatur neque, error.</p>
+																							</div>
+																							<div class="panel__content-select pt-2">
+																								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, at excepturi, dolores reprehenderit doloremque aspernatur. Distinctio, veniam, fugiat. Voluptatem odit nulla optio cupiditate veniam asperiores harum voluptatibus consequatur neque, error.</p>
+																								<div class="row">
+																									<div class="col-sm-7">
+																										<div class="form-group">
+																											<label for="date">Select date</label>
+																											<div class="input-group">
+																												<input type="text" class="form-control" name="date" id="date" data-toggle="datepicker">
+																												<div class="input-group-append">
+																													<span class="input-group-text" id="inputGroupPrepend">
+																														<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-calendar"></use></svg>
+																													</span>
+																												</div>
+																											</div>
+																										</div>
+																										<div class="form-group">
+																											<label for="quantity">Package Quantity</label>
+																											<div class="input-group">
+																												<input type="number" class="form-control" name="quantity" id="quantity" min="0">
+																												<div class="input-group-append">
+																													<span class="input-group-text" id="inputGroupPrepend">
+																														<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-traveler"></use></svg>
+																													</span>
+																												</div>
+																											</div>
+																										</div>
 																									</div>
 																								</div>
 																							</div>
-																							<div class="form-group">
-																								<label for="quantity">Package Quantity</label>
-																								<div class="input-group">
-																									<input type="number" class="form-control" name="quantity" id="quantity" min="0">
-																									<div class="input-group-append">
-																										<span class="input-group-text" id="inputGroupPrepend">
-																											<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-traveler"></use></svg>
-																										</span>
-																									</div>
-																								</div>
-																							</div>
-																							<h6>Inclusive Of:</h6>
-																							<ul>
-																								<li>Admission to the chocolate "touch" zone with opportunities to hold real chocolate art objects</li>
-																								<li>Educational video lesson on chocolate</li>
-																								<li>Swiss chocolate tasting and sampling</li>
-																							</ul>
 																						</div>
 																					</div>
-																				</div>
-																			</div>
-																		</div>
-																		
+																					
+						</div>
 						<hr class="mt-5 mb-5">
 						<h3 class="mb-3">About credits</h3>
 						<div class="font-weight-bold">

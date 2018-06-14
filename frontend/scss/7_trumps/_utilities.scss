@@ -35,3 +35,7 @@ a.headings-color:hover{
 .font-family-base{
   font-family: $font-family-base;
 }
+.inline-children{
+  display: flex;
+  flex-wrap: wrap;
+}

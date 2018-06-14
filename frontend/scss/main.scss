@@ -15,10 +15,12 @@
 @import "3_generic/bootstrap/reboot";
 @import "3_generic/fonts";
 @import "3_generic/icons";
+@import "3_generic/weather-icons/weather-icons";
 
 // Base
 @import "4_base/bootstrap_master";
 @import "4_base/forms";
+@import "4_base/tables";
 @import "4_base/type";
 
 // Objects
@@ -59,6 +61,8 @@
 @import "6_components/featured-posts";
 @import "6_components/single";
 @import "6_components/breadcrumb";
+@import "6_components/simple-carousel";
+@import "6_components/yotpo";
 
 // Trumps
 @import "7_trumps/bootstrap_master";
