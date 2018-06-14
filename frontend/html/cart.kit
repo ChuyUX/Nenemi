@@ -1,0 +1,101 @@
+<!-- @import "inc/head.kit" -->
+<body>
+	<!-- @import "inc/header.kit" -->
+	<main class="dashboard">
+		<div class="container">
+			<div class="dashboard__headline">
+				<h3>
+					<svg class="icon small"><use xlink:href="../img/symbol-defs.svg#icon-cart"></use></svg>
+					Cart
+				</h3>
+			</div>
+			<div class="dashboard__content">
+				<div class="row mb-1 mb-sm-4">
+					<div class="col-md-7">
+						<div class="inline-children pt-2 mb-3 mb-sm-0">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input woocommerce-select-all" id="selectall_top">
+								<label class="custom-control-label" for="selectall_top">Select All</label>
+							</div>
+							<button type="button" class="btn btn-link pt-0 pb-0">Delete selected activities</button>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="coupon form-inline justify-content-end mb-2 mb-sm-0">
+							<input type="text" name="coupon_code" class="form-control w-50" id="coupon_code" value="" placeholder="Promo Code">
+							<input type="submit" class="btn btn-link pr-0" name="apply_coupon" value="Aplicar código">
+						</div>
+					</div>
+				</div>
+				<table class="table table-striped mb-4 woocommerce-cart-form__contents">
+					<thead>
+						<tr>
+							<th></th>
+							<th class="d-none d-sm-table-cell"></th>
+							<th>Experience</th>
+							<th>Date</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th>
+								<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" id="customCheck1">
+								  <label class="custom-control-label" for="customCheck1"></label>
+								</div>
+							</th>
+							<th class="d-none d-sm-table-cell">
+								<img src="../img/dummy/thumbnail-300x169-3@2x.jpg" alt="Loving speleology" class="img-fluid" width="100">
+							</th>
+							<th>
+								<h4 class="mb-0">Loving speleology</h4>
+								Live a complete experience where you can enjoy Xcaret’s beautiful landscapes.
+							</th>
+							<th>March 15, 2018</th>
+							<th> $187 USD</th>
+						</tr>
+						<tr>
+							<th>
+								<div class="custom-control custom-checkbox">
+								  <input type="checkbox" class="custom-control-input" id="customCheck2">
+								  <label class="custom-control-label" for="customCheck2"></label>
+								</div>
+							</th>
+							<th class="d-none d-sm-table-cell">
+								<img src="../img/dummy/thumbnail-300x169-1@2x.jpg" alt="Loving speleology" class="img-fluid" width="100">
+							</th>
+							<th>
+								<h4 class="mb-0">Exploring Cancún City</h4>
+								Live a complete experience where you can enjoy Xcaret’s beautiful landscapes.
+							</th>
+							<th>March 15, 2018</th>
+							<th> $187 USD</th>
+						</tr>
+					</tbody>
+				</table>
+				<div class="row">
+					<div class="col-md-7">
+						<div class="inline-children mb-3 mb-sm-0">
+							<div class="custom-control custom-checkbox">
+								<input type="checkbox" class="custom-control-input woocommerce-select-all" id="selectall_bottom">
+								<label class="custom-control-label" for="selectall_bottom">Select All</label>
+							</div>
+							<button type="button" class="btn btn-link pt-0 pb-0">Delete selected activities</button>
+						</div>
+					</div>
+					<div class="col-md-5 text-right">
+						<div class="">
+							<p class="d-inline mr-2">You can use <b>120</b> points</p>
+							<button type="button" class="btn btn-primary btn-sm">Redeem Credits</button>
+						</div>
+						<hr>
+						<h2 class="font-family-base mb-1"><small class="">Total 3 activities:</small> <b class="text-primary">$604 USD</b></h2>
+						<hr>
+						<button class="btn btn-secondary">CHECKOUT</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- @import "inc/footer.kit" -->

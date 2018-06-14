@@ -1,0 +1,28 @@
+.table thead{
+  background: $primary;
+  color: white;
+}
+.table thead th{
+  border-color: white;
+}
+.table tbody h4{
+  font-size: $font-size-base;
+}
+.table tbody th, .table tbody td{
+  font-size: $font-size-sm;
+}
+.table-striped tbody tr:nth-of-type(odd){
+  background: #F9F9F9;
+}
+
+@include media-breakpoint-up(md) {
+  .table thead{
+    font-size: $h3-font-size;
+  }
+  .table tbody h4{
+    font-size: $h4-font-size;
+  }
+  .table tbody th, .table tbody td{
+    font-size: $font-size-base;
+  }
+}
