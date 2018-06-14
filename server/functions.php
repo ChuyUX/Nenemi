@@ -35,16 +35,31 @@ function footer_scripts()
     wp_enqueue_script('modernizr'); 
 
     wp_register_script('jQuery', get_template_directory_uri() . '/js/jquery.min.js', array('jquery'), '1.0.0'); 
-    wp_enqueue_script('jQuery');     
+    wp_enqueue_script('jQuery');
+
+    wp_register_script('popper-js', get_template_directory_uri() . '/js/popper.min.js', array('jquery'), '1.0.0'); 
+    wp_enqueue_script('popper-js');      
 
     wp_register_script('Bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '1.0.0'); 
     wp_enqueue_script('Bootstrap-js');
 
     wp_register_script('slick.min', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '1.0.0'); 
-    wp_enqueue_script('slick.min');  
+    wp_enqueue_script('slick.min'); 
+
+    wp_register_script('MagnificPopup', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array('jquery'), '1.0.0'); 
+    wp_enqueue_script('MagnificPopup');
+
+    wp_register_script('sharer-js', get_template_directory_uri() . '/js/sharer.min.js', array('jquery'), '1.0.0'); 
+    wp_enqueue_script('sharer-js'); 
+
+    wp_register_script('datepicker-js', get_template_directory_uri() . '/js/datepicker.min.js', array('jquery'), '1.0.0'); 
+    wp_enqueue_script('datepicker-js'); 
 
     wp_register_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); 
     wp_enqueue_script('scripts'); 
+
+    wp_register_script('wordpress-scripts', get_template_directory_uri() . '/js/wordpress-scripts.js', array('jquery'), '1.0.0'); 
+    wp_enqueue_script('wordpress-scripts'); 
 }
 add_action('wp_footer', 'footer_scripts');
 
@@ -154,5 +169,41 @@ add_action( 'init', 'menus' );
 
     }
     add_action('init', 'html5wp_pagination');
+
+    //Function for Star Ratings markup. Based on a product ID it displays the markup for its rating in stars.
+    function wc_rating_star_markup( $product_id ){
+        if(get_post_type($product_id) == 'product'){
+            $rating = get_post_meta( $product_id, '_wc_average_rating', true );
+            $rating = floor($rating);
+            
+            for($star = 0; $star < $rating; $star++) {                 
+                echo '<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="' . get_template_directory_uri() . '/img/symbol-defs.svg#icon-star"></use></svg>';
+            }                    
+            
+            for($star = $rating; $star < 5; $star++){  
+                echo '<svg class="rating list-item__meta-icon icon"><use xlink:href="' . get_template_directory_uri() . '/img/symbol-defs.svg#icon-star"></use></svg>';
+            }
+        }
+    } 
+
+    //Function for displaying correct information for a price (symbol and currency)
+    function wc_currency_display_text($quantity){
+        echo get_woocommerce_currency_symbol() . $quantity . ' ' . get_woocommerce_currency();
+    }
+
+    //Function to know if right now is between to dates
+    function is_between_dates($date_prev, $date_post){
+        $date_today = new DateTime();
+
+        $date_prev = DateTime::createFromFormat('m/d/Y', $date_prev);
+        $date_post = DateTime::createFromFormat('m/d/Y', $date_post);
+
+        if($date_today <= $date_post && $date_today >= $date_prev){
+            return true;
+        }
+        else { 
+            return false;
+        }
+    }   
 
 ?>

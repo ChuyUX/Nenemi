@@ -138,6 +138,11 @@ $(function () {
 
   $('[data-toggle="datepicker"]').datepicker();
 
+  $('[data-toggle="datepicker_package"]').datepicker({
+    startDate : $('input#startD').val(),
+    endDate :   $('input#endD').val()
+  });
+
   $('.scroll-to').each(function(){
     $(this).click(function(){
         $('html,body').animate({ scrollTop: $($(this).attr('href')).position().top }, 'slow');
