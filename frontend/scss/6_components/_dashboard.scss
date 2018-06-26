@@ -21,11 +21,6 @@
 .dashboard__headline{
   border-bottom: 1px solid #D8D8D8;
   padding: 30px 10px;
-
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .dashboard__headline *{
   -ms-flex-preferred-size: 0;
@@ -111,6 +106,21 @@
   width: 30px;
 }
 
+@include media-breakpoint-up(md) {
+  .dashboard__headline{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .dashboard__headline *{
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
 @include media-breakpoint-up(md) {
   .dashboard__headline{
     padding: 30px;

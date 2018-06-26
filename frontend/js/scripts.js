@@ -42,6 +42,22 @@ $(function () {
     dots: true
   });
 
+  $('.featured-posts').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          centerPadding: '20px',
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+
   $('.filter a').click(function(){
     if($(this).hasClass('btn-outline-primary')){
       $('.results-list').addClass('results-list--overlay');
@@ -136,34 +152,18 @@ $(function () {
     type: 'iframe'
   });
 
-  $('[data-toggle="datepicker"]').datepicker();
-
-  $('[data-toggle="datepicker_package"]').datepicker({
-    startDate : $('input#startD').val(),
-    endDate :   $('input#endD').val()
+  $('.js-modal').magnificPopup({
+    type: 'inline',
+    modal: true
   });
+
+  $('[data-toggle="datepicker"]').datepicker();
 
   $('.scroll-to').each(function(){
     $(this).click(function(){
         $('html,body').animate({ scrollTop: $($(this).attr('href')).position().top }, 'slow');
         return false;
     });
-  });
-
-  $('.featured-posts').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          arrows: false,
-          centerPadding: '20px',
-          slidesToShow: 1
-        }
-      }
-    ]
   });
 
   $('.woocommerce-select-all').change(function(){
@@ -199,6 +199,14 @@ $(function () {
       $(this).parents('.panel').addClass('panel--active');
     }
     return false;
+  });
+
+  $('input[name="payment"]').change(function(){
+    if($('#mc_visa').prop('checked')){
+      $('.mc_visa__wrapper').show();
+    } else{
+      $('.mc_visa__wrapper').hide();
+    }
   });
 
 });

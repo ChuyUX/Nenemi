@@ -16,11 +16,22 @@
   width: 100%;
   z-index: 1;
 }
+.grid-item__content h4 a{
+  color: white;
+}
+.grid-item__content h4 a:hover{
+  color: $primary;
+  text-decoration: none;
+}
 .grid-item__meta{
   color: white;
   font-size: $font-size-sm;
   line-height: 1;
   margin-bottom: 10px;
+}
+.grid-item__meta .icon{
+  position: relative;
+  top: 2px;
 }
 .grid-item__text{
   color: white;

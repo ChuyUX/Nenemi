@@ -16,3 +16,7 @@
   background: $primary;
   border-color: $primary;
 }
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before{
+  background: $primary;
+  border-color: $primary;
+}
