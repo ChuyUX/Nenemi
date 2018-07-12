@@ -13,10 +13,7 @@
   height: 50%;
   top: auto;
 }
-.hero--fullheight-overlay:before{
-  height: 100%;
-}
-.hero .container, .hero .container-fluid, .hero .row{
+.hero .container-fluid, .hero .row{
   height: 100%;
 }
 .hero__actions{

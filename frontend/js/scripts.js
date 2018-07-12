@@ -23,39 +23,9 @@ $(function () {
     centerPadding: ($(window).width() - $('.navbar').width()) / 2+'px'
   });
 
-  $('.js-simple-carousel').slick({
-    infinite: false,
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-
   $('.card .collapse.show .wishlist-carousel').slick({
     arrows: false,
     dots: true
-  });
-
-  $('.featured-posts').slick({
-    centerMode: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          arrows: false,
-          centerPadding: '20px',
-          slidesToShow: 1
-        }
-      }
-    ]
   });
 
   $('.filter a').click(function(){
@@ -152,11 +122,6 @@ $(function () {
     type: 'iframe'
   });
 
-  $('.js-modal').magnificPopup({
-    type: 'inline',
-    modal: true
-  });
-
   $('[data-toggle="datepicker"]').datepicker();
 
   $('.scroll-to').each(function(){
@@ -166,47 +131,20 @@ $(function () {
     });
   });
 
-  $('.woocommerce-select-all').change(function(){
-    if($(this).is(':checked')){
-      $('.woocommerce-cart-form__contents input').each(function(){
-        $(this).prop('checked', true);
-      });
-    } else {
-      $('.woocommerce-cart-form__contents input').each(function(){
-        $(this).prop('checked', false);
-      });
-    }
-  });
-
-  $('.js-select-pckg').click(function(){
-    if($(this).parents('.panel').hasClass('panel--active')){
-      $(this).parents('.pckg-wrappper').find('.panel:not(.panel--active) .btn-primary').removeClass('btn-primary').addClass('btn-outline-primary').text('SELECT');
-    }else{
-      $(this).parents('.pckg-wrappper').find('.panel .btn-primary').removeClass('btn-primary').addClass('btn-outline-primary').text('SELECT');
-    }
-    $('.panel').removeClass('panel--active');
-    $('.panel__content-select').hide();
-    $('.js-view-pckg').fadeIn();
-    if($(this).hasClass('btn-primary')){
-      $(this).removeClass('btn-primary').addClass('btn-outline-primary').text('SELECT');
-      $(this).parents('.panel').find('.panel__content-select').hide();
-      $(this).parents('.panel').find('.js-view-pckg').show();
-      $(this).parents('.panel').removeClass('panel--active');
-    } else {
-      $(this).removeClass('btn-outline-primary').addClass('btn-primary').text('SELECTED');
-      $(this).parents('.panel').find('.panel__content-select').show();
-      $(this).parents('.panel').find('.js-view-pckg').hide();
-      $(this).parents('.panel').addClass('panel--active');
-    }
-    return false;
-  });
-
-  $('input[name="payment"]').change(function(){
-    if($('#mc_visa').prop('checked')){
-      $('.mc_visa__wrapper').show();
-    } else{
-      $('.mc_visa__wrapper').hide();
-    }
+  $('.featured-posts').slick({
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false,
+          centerPadding: '20px',
+          slidesToShow: 1
+        }
+      }
+    ]
   });
 
 });

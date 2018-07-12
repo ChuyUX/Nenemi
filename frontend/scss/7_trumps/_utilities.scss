@@ -35,21 +35,3 @@ a.headings-color:hover{
 .font-family-base{
   font-family: $font-family-base;
 }
-.inline-children{
-  display: flex;
-  flex-wrap: wrap;
-}
-.payment__item{
-  margin-bottom: 50px;
-  padding-left: 32px;
-}
-.payment__item .custom-control-label{
-  font-size: 1.5rem;
-}
-.payment__item .custom-control-label::before,
-.payment__item .custom-control-label::after{
-  top: .5rem;
-}
-.payment__item .custom-control-label img{
-  margin-right: 3px;
-}
