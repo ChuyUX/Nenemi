@@ -62,6 +62,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 											<h5 class="profile__field"><?php echo WC()->countries->countries[ get_user_meta($current_user->ID, 'billing_country',true) ];?></h5>
 										</div>										
 									<?php endif ?>
+										<div class="mb-4">
+											<p class="mb-2"><b>Points:</b></p>
+											<h5 class="profile__field"><?php echo do_shortcode("[mycred_my_balance]"); ?></h5>
+										</div>	
 
 									<a href="#" class="btn btn-primary js-toggle-profile-edit">Editar</a>
 								</div>
