@@ -14,6 +14,9 @@
   justify-content: space-between;
   margin-top: 1rem;
 }
+.panel__content-select{
+  display: none;
+}
 @include media-breakpoint-up(sm) {
   .panel__header-col:last-child{
     margin-top: 0;

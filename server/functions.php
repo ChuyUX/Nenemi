@@ -315,4 +315,40 @@ add_image_size( 'slider-thumbnail', $width = 600, $height = 400, $crop = true );
 
 add_image_size( 'home-thumbnail', 400, 400, array( 'center', 'center' ) );
 
+    //Function for Star Ratings markup. Based on a product ID it displays the markup for its rating in stars.
+    function wc_rating_star_markup( $product_id ){
+        if(get_post_type($product_id) == 'product'){
+            $rating = get_post_meta( $product_id, '_wc_average_rating', true );
+            $rating = floor($rating);
+            
+            for($star = 0; $star < $rating; $star++) {                 
+                echo '<svg class="rating rating--active list-item__meta-icon icon"><use xlink:href="' . get_template_directory_uri() . '/img/symbol-defs.svg#icon-star"></use></svg>';
+            }                    
+            
+            for($star = $rating; $star < 5; $star++){  
+                echo '<svg class="rating list-item__meta-icon icon"><use xlink:href="' . get_template_directory_uri() . '/img/symbol-defs.svg#icon-star"></use></svg>';
+            }
+        }
+    } 
+
+    //Function for displaying correct information for a price (symbol and currency)
+    function wc_currency_display_text($quantity){
+        echo get_woocommerce_currency_symbol() . $quantity . ' ' . get_woocommerce_currency();
+    }
+
+    //Function to know if right now is between to dates
+    function is_between_dates($date_prev, $date_post){
+        $date_today = new DateTime();
+
+        $date_prev = DateTime::createFromFormat('m/d/Y', $date_prev);
+        $date_post = DateTime::createFromFormat('m/d/Y', $date_post);
+
+        if($date_today <= $date_post && $date_today >= $date_prev){
+            return true;
+        }
+        else { 
+            return false;
+        }
+    }   
+
 ?>
