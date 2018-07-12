@@ -2,18 +2,18 @@
 
 	<main role="main">
 		<!-- BEGIN: Main Stage -->
-		<div class="main-stage" style="background-image: url(<?php echo get_template_directory_uri(); ?>/img/dummy/banner-1280x720-1.jpg);">
+		<div class="main-stage">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col"></div>
 			    <div class="col-md-9 text-center">
-			      <h1 class="main-stage__title"><?php _e('DISCOVER AMAZING EXPERIENCES', 'nenemi_front-page_page'); ?></h1>
+			      <h1 class="main-stage__title">DISCOVER AMAZING EXPERIENCES</h1>
 				  <?php get_search_form(); ?>
 			    </div>
 			    <div class="col"></div>
 				</div>
 				<div class="main-stage__nav">
-					<?php _e('See more', 'nenemi_button_element');?><br>
+					See more <br>
 					<a href="#" class="main-stage__nav-item">
 						<svg class="main-stage__nav-icon icon"><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/symbol-defs.svg#icon-arrow-down-rounded"></use></svg>
 					</a>
@@ -24,50 +24,51 @@
 		<!-- BEGIN: Top Destinations -->
 		<div class="pt-5 pb-5">
 			<div class="container">
-				<h2 class="mb-4"><?php _e('Top destinations', 'nenemi_front-page_page'); ?></h2>
+				<h2 class="mb-4">Top destinations</h2>
 				<div class="posts-carousel js-destinations">
-					<?php
-					$args = array(
-						'post_type'		=>	array('ciudad'),
-						'posts_per_page' => -1
-					);
-
-					$query = new WP_Query($args);
-
-					if($query->have_posts()) : while($query->have_posts()) : $query->the_post();
-					?>
-						<div class="posts-carousel__slide">
-							<div class="posts-carousel__item">
-								<a href="<?php the_permalink(); ?>">
-								<?php 
-								$attr = array(
-								    'class' => "img-fluid",
-								    'alt'   => get_the_title()
-								);
-								the_post_thumbnail('home-thumbnail',$attr); ?>
-									<div class="posts-carousel__item-content">
-										<h6 class="text-white mb-0"><?php the_title(); ?></h6>
-									</div>
-								</a>
+					<div class="posts-carousel__slide">
+						<div class="posts-carousel__item">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-300x300-1@2x.jpg" class="img-fluid" alt="Cancún">
+							<div class="posts-carousel__item-content">
+								<h6 class="text-white mb-0">Cancún</h6>
 							</div>
 						</div>
-					<?php endwhile;
-					endif; ?>
+					</div>
+					<div class="posts-carousel__slide">
+						<div class="posts-carousel__item">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-300x300-2@2x.jpg" class="img-fluid" alt="Cancún">
+							<div class="posts-carousel__item-content">
+								<h6 class="text-white mb-0">Puerto Vallarta</h6>
+							</div>
+						</div>
+					</div>
+					<div class="posts-carousel__slide">
+						<div class="posts-carousel__item">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-300x300-3@2x.jpg" class="img-fluid" alt="Cancún">
+							<div class="posts-carousel__item-content">
+								<h6 class="text-white mb-0">Mexico City</h6>
+							</div>
+						</div>
+					</div>
+					<div class="posts-carousel__slide">
+						<div class="posts-carousel__item">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-300x300-1@2x.jpg" class="img-fluid" alt="Cancún">
+							<div class="posts-carousel__item-content">
+								<h6 class="text-white mb-0">Cancún</h6>
+							</div>
+						</div>
+					</div>
 				</div>
-				<!--
 				<div class="text-center">
-					<a href="#" class="btn btn-primary"><?php _e('SEE ALL DESTINATIONS', 'nenemi_button_element'); ?></a>
+					<a href="#" class="btn btn-primary">SEE ALL DESTINATIONS</a>
 				</div>
-				-->
 			</div>
 		</div>
 		<!-- END: Top Destinations -->
 		<!-- BEGIN: Popular Activities -->
 		<div class="bg-cover pt-5 pb-5" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/stage-1280x861-1.jpg);">
 			<div class="container">
-				<h2 class="text-white mb-3"><?php _e('Popular Activities', 'nenemi_front-page_page'); ?></h2>
-				<h4 class="text-white mb-3">We have no popular activities for the moment.</h4>
-				<!--
+				<h2 class="text-white mb-3">Popular Activities</h2>
 				<div class="list-item">
 					<div class="list-item__thumbnail-wrapper">
 						<a href="#" class="list-item__thumbnail">
@@ -194,14 +195,13 @@
 				<div class="text-center pt-2">
 					<a href="#" class="btn btn-primary">SEE ALL ACTIVITIES</a>
 				</div>
-				-->
 			</div>
 		</div>
 		<!-- END: Popular Activities -->
 		<!-- BEGIN: Recomended Activities -->
 		<div class="pt-5 pb-5" style="overflow:hidden;">
 			<div class="container">
-				<h2><?php _e('Recommended Activities', 'nenemi_front-page_page'); ?></h2>
+				<h2>Recomended Activities</h2>
 			</div>
 			<div class="posts-carousel posts-carousel--centered js-centeritem">
 				<div class="posts-carousel__slide">
@@ -259,81 +259,61 @@
 		<div class="blog-bg pt-5 pb-5" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/stage-1563x1900-1.jpg);">
 			<div class="container">
 				<hr class="mb-4">
-				<h2><?php _e('Discover', 'nenemi_front-page_page'); ?></h2>
-				<?php 
-				$args = array(
-					'posts_per_page' => 6,
-				);
-
-				$the_query = new WP_Query($args);
-
-				$blog_posts_counter = 1;
-
-				if ($the_query->have_posts()) : ?>
-					<div class="row">
-						<?php while($the_query->have_posts()) : 
-							$the_query->the_post();
-
-							if($blog_posts_counter == 1) : ?>
-						
-								<div class="col-md-6">
-									<a href="<?php the_permalink(); ?>" class="grid-item" style="background-image:url(<?php the_post_thumbnail_url(); ?>);">
-										<div class="grid-item__content">
-											<h4 class="text-white mb-0"><?php the_title(); ?></h4>
-											<div class="grid-item__meta">By: <?php the_author_nickname(); ?> | <?php the_date(); ?></div>
-											<p class="grid-item__text"><?php echo get_the_excerpt(); ?></p>
-										</div>
-									</a>
-								</div>
-
-							<?php elseif($blog_posts_counter == 2 || $blog_posts_counter == 3) : ?>
-
-								<div class="col-sm-6 col-md-3">
-									<a href="<?php the_permalink(); ?>" class="grid-item" style="background-image:url(<?php the_post_thumbnail_url(); ?>);">
-										<div class="grid-item__content">
-											<h4 class="text-white mb-0"><?php the_title(); ?></h4>
-											<div class="grid-item__meta">By: <?php the_author_nickname(); ?> | <?php the_date(); ?></div>
-										</div>
-									</a>
-								</div>
-
-								<?php if($blog_posts_counter == 3) : ?>
-									</div>
-									<div class="row">
-										<div class="col-md">
-								<?php endif; ?>
-
-							<?php elseif($blog_posts_counter == 4 || $blog_posts_counter == 5) : ?>
-					
-								<a href="<?php the_permalink(); ?>" class="grid-item grid-item--half" style="background-image:url(<?php the_post_thumbnail_url(); ?>);">
-									<div class="grid-item__content">
-										<h4 class="text-white mb-0"><?php the_title(); ?></h4>
-											<div class="grid-item__meta">By: <?php the_author_nickname(); ?> | <?php the_date(); ?></div>
-									</div>
-								</a>
-
-							<?php elseif($blog_posts_counter == 6) : ?>
-
-								</div>
-								<div class="col-md">
-									<a href="<?php the_permalink(); ?>" class="grid-item" style="background-image:url(<?php the_post_thumbnail_url(); ?>);">
-										<div class="grid-item__content">
-											<h4 class="text-white mb-0"><?php the_title(); ?></h4>
-											<div class="grid-item__meta">By: <?php the_author_nickname(); ?> | <?php the_date(); ?></div>
-											<p class="grid-item__text"><?php echo get_the_excerpt(); ?></p>
-										</div>
-									</a>
-								</div>
-
-							<?php endif; 
-
-							$blog_posts_counter++; ?>
-
-						<?php endwhile; ?>
+				<h2>Discover</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<a href="#" class="grid-item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-460x360-1@2x.jpg);">
+							<div class="grid-item__content">
+								<h4 class="text-white mb-0">5 extreme things to do in Cancun</h4>
+								<div class="grid-item__meta">By: Neil Young | March 15, 2018</div>
+								<p class="grid-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+							</div>
+						</a>
 					</div>
-				<?php endif; ?>
+					<div class="col-sm-6 col-md-3">
+						<a href="#" class="grid-item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-220x360-1@2x.jpg);">
+							<div class="grid-item__content">
+								<h4 class="text-white mb-0">Exploring Mexico City</h4>
+								<div class="grid-item__meta mb-0">By: Neil Young | March 15, 2018</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<a href="#" class="grid-item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-220x360-2@2x.jpg);">
+							<div class="grid-item__content">
+								<h4 class="text-white mb-0">The beauty of Monterrey</h4>
+								<div class="grid-item__meta mb-0">By: Neil Young | March 15, 2018</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md">
+						<a href="#" class="grid-item grid-item--half" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-460x170-1@2x.jpg);">
+							<div class="grid-item__content">
+								<h4 class="text-white mb-0">The beautiful mountains</h4>
+								<div class="grid-item__meta mb-0">By: Neil Young | March 15, 2018</div>
+							</div>
+						</a>
+						<a href="#" class="grid-item grid-item--half" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-460x170-2@2x.jpg);">
+							<div class="grid-item__content">
+								<h4 class="text-white mb-0">Guanajuato: the extraordinary Unesco World Heritage city</h4>
+								<div class="grid-item__meta mb-0">By: Neil Young | March 15, 2018</div>
+							</div>
+						</a>
+					</div>
+					<div class="col-md">
+						<a href="#" class="grid-item" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/dummy/thumbnail-460x360-2@2x.jpg);">
+							<div class="grid-item__content">
+								<h4 class="text-white mb-0">Loving speleology</h4>
+								<div class="grid-item__meta">By: Neil Young | March 15, 2018</div>
+								<p class="grid-item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+							</div>
+						</a>
+					</div>
+				</div>
 				<div class="text-center pt-2">
-					<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>" class="btn btn-primary"><?php _e('DISCOVER MORE', 'nenemi_button_element'); ?></a>
+					<a href="#" class="btn btn-primary">DISCOVER MORE</a>
 				</div>
 			</div>
 		</div>

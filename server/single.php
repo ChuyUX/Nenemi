@@ -25,8 +25,8 @@
 					<hr>
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-						    <li class="breadcrumb-item"><a href="http://nenemi.com"><?php _e('Home', 'nenemi_single_page'); ?></a></li>
-						    <li class="breadcrumb-item"><a href="http://nenemi.com/blog"><?php _e('Blog', 'nenemi_single_page'); ?></a></li>
+						    <li class="breadcrumb-item"><a href="http://nenemi.com">Home</a></li>
+						    <li class="breadcrumb-item"><a href="http://nenemi.com/blog">Blog</a></li>
 						    <li class="breadcrumb-item active" aria-current="page"><?php the_title(); ?></li>
 						</ol>
 					</nav>
@@ -36,7 +36,7 @@
 					</div>
 					<!-- Call to action -->
 					<div class="text-center mt-5 mb-5">
-						<a href="<?php echo the_field('button_link'); ?>" class="btn btn-lg btn-primary"><?php _e('Visit', 'nenemi_button_element'); ?> <?php echo the_field('button_text'); ?> <?php _e('in nenemi.com', 'nenemi_button_element'); ?></a>
+						<a href="<?php echo the_field('button_link'); ?>" class="btn btn-lg btn-primary">Visit <?php echo the_field('button_text'); ?> in nenemi.com</a>
 					</div>
 					<hr>
 					<!-- Comments -->

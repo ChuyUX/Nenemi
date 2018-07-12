@@ -11,3 +11,7 @@ License: MIT
 License URI: http://opensource.org/licenses/mit-license.php
 
 */
+
+.woocommerce-message,.woocommerce-error{
+	margin-bottom:0!important;
+}
