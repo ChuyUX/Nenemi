@@ -28,35 +28,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="row">
 				<div class="col-md-6 offset-md-3">
 					<div class="text-center">
-						<h2 class="mb-3">Registro</h2>
+						<h2 class="mb-3"><?php _e('Register', 'nenemi_wc_register'); ?></h2>
 						<?php wc_print_notices(); ?>
 						<?php do_action( 'woocommerce_before_customer_login_form' ); ?>
 					</div>
 					<div class="container-wrapper pt-5 pb-5 pr-5 pl-5">
 					<?php do_action( 'woocommerce_register_form_start' ); ?>
-						<form method="post" class="register">
+						<form method="post">
 							<div class="form-group">
-								<label for="name">First Name</label>
+								<label for="name"><?php _e('First Name', 'nenemi_wc_register'); ?></label>
 								<input type="text" class="form-control" name="first_name" value="<?php echo ( ! empty( $_POST['first_name'] ) ) ? esc_attr( wp_unslash( $_POST['first_name'] ) ) : ''; ?>" >
 							</div>
 							<div class="form-group">
-								<label for="name">Last Name</label>
+								<label for="name"><?php _e('Last Name', 'nenemi_wc_register'); ?></label>
 								<input type="text" class="form-control" name="last_name" value="<?php echo ( ! empty( $_POST['last_name'] ) ) ? esc_attr( wp_unslash( $_POST['last_name'] ) ) : ''; ?>" >
 							</div>
 							<div class="form-group">
-								<label for="email">Email</label>
+								<label for="email"><?php _e('Email', 'nenemi_wc_register'); ?></label>
 								<input type="email" class="form-control" name="email" id="reg_email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" ><?php // @codingStandardsIgnoreLine ?>
 							</div>
 							<div class="form-group">
-								<label for="billing_phone">Phone</label>
+								<label for="billing_phone"><?php _e('Phone', 'nenemi_wc_register'); ?></label>
 								<input type="tel" class="form-control" name="billing_phone" id="billing_phone" value="<?php echo ( ! empty( $_POST['billing_phone'] ) ) ? esc_attr( wp_unslash( $_POST['billing_phone'] ) ) : ''; ?>" >
 							</div>
 							<div class="form-group">
-								<label for="birthday">Birthday</label>
+								<label for="birthday"><?php _e('Birthday', 'nenemi_wc_register'); ?></label>
 								<input type="date" class="form-control" name="birthday" value="<?php echo ( ! empty( $_POST['birthday'] ) ) ? esc_attr( wp_unslash( $_POST['birthday'] ) ) : ''; ?>" >
 							</div>
 							<div class="form-group">
-								<label for="country">Country</label>
+								<label for="country"><?php _e('Country', 'nenemi_wc_register'); ?></label>
 								<?php 
 								global $woocommerce;    
 								woocommerce_form_field( 
@@ -68,23 +68,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 								); ?>
 							</div>
 							<div class="form-group">
-								<label for="password">Password</label>
+								<label for="password"><?php _e('Password', 'nenemi_wc_register'); ?></label>
 								<input type="password" autocomplete="off" class="form-control" name="password" id="reg_password" >
 							</div>
 							<?php do_action( 'woocommerce_register_form' ); ?>
 			                <div class="form-check form-check-inline">
 			                  <input class="form-check-input" name="rememberme" type="checkbox" id="rememberme" value="forever">
-			                  <label class="form-check-label" for="rememberme">Recordar contraseña</label>
+			                  <label class="form-check-label" for="rememberme"><?php _e('Remember me', 'nenemi_wc_register'); ?></label>
 			                </div>
 							<?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-							<button type="submit" class="btn btn-primary btn-block" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>">Register</button>			
+							<button type="submit" class="btn btn-primary btn-block" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php _e('Register', 'nenemi_wc_register'); ?></button>			
 						</form>
 						<?php do_action( 'woocommerce_register_form_end' ); ?>
 						<?php do_action( 'woocommerce_after_customer_login_form' ); ?>
-						<div class="text-center"><p class="mb-2">Or connect whit:</p></div>
+						<div class="text-center"><p class="mb-2"><?php _e('Or connect with:', 'nenemi_wc_register'); ?></p></div>
 						<div class="row">
-							<div class="col-sm-6"><a href="#" class="btn btn-fb btn-sm btn-block">Registrate con Facebook</a></div>
-							<div class="col-sm-6"><a href="#" class="btn btn-wc btn-sm btn-block">Registrate con We Chat</a></div>
+							<div class="col-sm-6"><a href="#" class="btn btn-fb btn-sm btn-block">Register with Facebook</a></div>
+							<div class="col-sm-6"><a href="#" class="btn btn-wc btn-sm btn-block">Register with We Chat</a></div>
 						</div>
 					</div>
 				</div>

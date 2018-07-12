@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <div class="col-sm-6"><a href="#" class="btn btn-fb btn-sm btn-block" onclick="login_button_click('facebook','http://nenemi.com/')">Registrate con Facebook</a></div>
                 <div class="col-sm-6"><a href="#" class="btn btn-wc btn-sm btn-block" onclick="login_button_click('wechat','http://nenemi.com/')">Registrate con We Chat</a></div>
               </div>
-              <form class="login" method="post">
+              <form method="post">
                 <?php do_action( 'woocommerce_login_form_start' ); ?>
                 <div class="form-group">
                   <label for="username">Email</label>

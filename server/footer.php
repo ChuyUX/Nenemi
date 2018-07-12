@@ -15,14 +15,14 @@
 							?>
 						</div>
 						<div class="col-md col-lg-5 mb-3">
-							<h4 class="mb-3">Subscribe to our newsletter</h4>
+							<h4 class="mb-3"><?php _e('Subscribe to our newsletter', 'nenemi_footer'); ?></h4>
 							<form class="form-inline">
 								<input type="text" class="form-control" placeholder="Enter your email adress...">
 								<button type="submit" class="btn btn-primary">SUBMIT</button>
 							</form>
 						</div>
 						<div class="col-lg mb-3">
-							<h4 class="mb-3">Follow us</h4>
+							<h4 class="mb-3"><?php _e('Follow us', 'nenemi_footer'); ?></h4>
 							<nav class="social">
 								<a href="#" class="social__item">
 									<svg class="icon social__icon"><use xlink:href="<?php echo get_template_directory_uri(); ?>/img/symbol-defs.svg#icon-facebook-rounded"></use></svg>
@@ -43,7 +43,7 @@
 						</div>
 					</div>
 					<div class="text-center footer__bottom">
-						®Nenemi 2018. ©All rights reserved.  |  <a href="#">Terms of service</a>.  | <a href="#">Privacy policy</a>.
+						®Nenemi 2018. ©<?php _e('All rights reserved.', 'nenemi_footer'); ?>  |  <a href="#"><?php _e('Terms of service', 'nenemi_footer'); ?></a>.  | <a href="#"><?php _e('Privacy policy', 'nenemi_footer'); ?></a>.
 					</div>
 				</div>
 			</footer>
