@@ -53,7 +53,7 @@
 		<!-- BEGIN: Results List -->
 		<div class="results-list">
 			<div class="container pt-5">
-				<h2 class="mb-3"><?php echo sprintf( __( '%s resultados encontrados ', 'html5blank' ), $wp_query->found_posts ); ?></h2>
+				<h2 class="mb-3"><?php echo sprintf( __( 'No experiences found', 'html5blank' ), $wp_query->found_posts ); ?></h2>
 				<div class="card-deck">
 					<?php wc_get_template_part('content', 'product'); ?>
 					<?php get_template_part('pagination'); ?>
