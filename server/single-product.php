@@ -29,24 +29,7 @@
 					<?php endif; ?>
 				</div>
 				<div class="col text-right">
-					<div class="dropdown d-inline-block">
-						<a href="#" class="btn btn-sm btn-sm-icon btn-light" data-toggle="dropdown">
-							<svg class="icon">
-								<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/symbol-defs.svg#icon-share"></use>
-							</svg>
-							<span class="d-none d-sm-inline-block"><?php _e('Share', 'nenemi_button_element'); ?></span>
-						</a>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-							<a href="#" class="dropdown-item" data-sharer="facebook" data-url="<?php the_permalink(); ?>">Facebook</a>
-							<a href="#" class="dropdown-item" data-sharer="twitter" data-title="Checkout <?php the_title(); ?>!" data-url="<?php the_permalink(); ?>">Twitter</a>
-						</div>
-					</div>
-					<!--<a href="#" class="btn btn-sm btn-sm-icon btn-light bg-white">
-						<svg class="icon">
-							<use xlink:href="<?php echo get_template_directory_uri(); ?>/img/symbol-defs.svg#icon-love"></use>
-						</svg>
-						<span class="d-none d-sm-inline-block"><?php _e('Add to favorites', 'nenemi_button_element'); ?></span>
-					</a> -->
+					<?php get_template_part("product","share") ?>
 				</div>
 			</div>
 		</div>
@@ -60,15 +43,9 @@
 
 	<?php 
 	$variations = $product->get_available_variations(); 
-
-	//Find variation with lower price
-	$lowest_price = 999999;
-	foreach ($variations as $variation) {
-		if($variation[display_price] < $lowest_price){
-			$lowest_price = $variation[display_price];
-			$lowest_regular_price = $variation[display_regular_price];
-		}
-	}
+	$variation_lowest_price = variation_lowest_price($variations);
+	$lowest_price = $variation_lowest_price[0];
+	$lowest_regular_price = $variation_lowest_price[1];
 	?>
 
 	<div class="bg-white pt-5 pb-5 border-bottom">
