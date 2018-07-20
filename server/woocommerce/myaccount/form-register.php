@@ -34,22 +34,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 					</div>
 					<div class="container-wrapper pt-5 pb-5 pr-5 pl-5">
 					<?php do_action( 'woocommerce_register_form_start' ); ?>
-						<form method="post">
+						<form method="post" autocomplete="on">
 							<div class="form-group">
 								<label for="name"><?php _e('First Name', 'nenemi_wc_register'); ?></label>
-								<input type="text" class="form-control" name="first_name" value="<?php echo ( ! empty( $_POST['first_name'] ) ) ? esc_attr( wp_unslash( $_POST['first_name'] ) ) : ''; ?>" >
+								<input type="text" class="form-control" autocomplete="given-name" required name="first_name" value="<?php echo ( ! empty( $_POST['first_name'] ) ) ? esc_attr( wp_unslash( $_POST['first_name'] ) ) : ''; ?>" >
 							</div>
 							<div class="form-group">
 								<label for="name"><?php _e('Last Name', 'nenemi_wc_register'); ?></label>
-								<input type="text" class="form-control" name="last_name" value="<?php echo ( ! empty( $_POST['last_name'] ) ) ? esc_attr( wp_unslash( $_POST['last_name'] ) ) : ''; ?>" >
+								<input type="text" class="form-control" autocomplete="family-name" required name="last_name" value="<?php echo ( ! empty( $_POST['last_name'] ) ) ? esc_attr( wp_unslash( $_POST['last_name'] ) ) : ''; ?>" >
 							</div>
 							<div class="form-group">
 								<label for="email"><?php _e('Email', 'nenemi_wc_register'); ?></label>
-								<input type="email" class="form-control" name="email" id="reg_email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" ><?php // @codingStandardsIgnoreLine ?>
+								<input type="email" class="form-control" name="email" autocomplete="email" required id="reg_email" value="<?php echo ( ! empty( $_POST['email'] ) ) ? esc_attr( wp_unslash( $_POST['email'] ) ) : ''; ?>" ><?php // @codingStandardsIgnoreLine ?>
 							</div>
 							<div class="form-group">
 								<label for="billing_phone"><?php _e('Phone', 'nenemi_wc_register'); ?></label>
-								<input type="tel" class="form-control" name="billing_phone" id="billing_phone" value="<?php echo ( ! empty( $_POST['billing_phone'] ) ) ? esc_attr( wp_unslash( $_POST['billing_phone'] ) ) : ''; ?>" >
+								<input type="tel" class="form-control" name="billing_phone" autocomplete="tel" id="billing_phone" value="<?php echo ( ! empty( $_POST['billing_phone'] ) ) ? esc_attr( wp_unslash( $_POST['billing_phone'] ) ) : ''; ?>" >
 							</div>
 							<div class="form-group">
 								<label for="birthday"><?php _e('Birthday', 'nenemi_wc_register'); ?></label>
@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							</div>
 							<div class="form-group">
 								<label for="password"><?php _e('Password', 'nenemi_wc_register'); ?></label>
-								<input type="password" autocomplete="off" class="form-control" name="password" id="reg_password" >
+								<input type="password" autocomplete="off" class="form-control" name="password"  autocomplete="new-password" id="reg_password" >
 							</div>
 							<?php do_action( 'woocommerce_register_form' ); ?>
 			                <div class="form-check form-check-inline">

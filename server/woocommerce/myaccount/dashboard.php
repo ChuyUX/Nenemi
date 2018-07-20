@@ -75,15 +75,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
 									<div class="form-group">
 										<label for="first_name" class="text-white">First Name</label>
-										<input type="text" class="form-control" name="account_first_name" id="account_first_name" value="<?php echo esc_attr( $current_user->first_name ); ?>">
+										<input type="text" class="form-control" autocomplete="given-name" name="account_first_name" id="account_first_name" value="<?php echo esc_attr( $current_user->first_name ); ?>">
 									</div>
 									<div class="form-group">
 										<label for="last_name" class="text-white">Last Name</label>
-										<input type="text" class="form-control" name="account_last_name" id="account_last_name"  value="<?php echo esc_attr( $current_user->last_name ); ?>" >
+										<input type="text" class="form-control" autocomplete="family-name" name="account_last_name" id="account_last_name"  value="<?php echo esc_attr( $current_user->last_name ); ?>" >
 									</div>
 									<div class="form-group">
 										<label for="email" class="text-white">Email</label>
-										<input type="email" class="form-control" name="account_email" id="account_email" value="<?php echo esc_attr( $current_user->user_email ); ?>">
+										<input type="email" class="form-control"  autocomplete="email"  name="account_email" id="account_email" value="<?php echo esc_attr( $current_user->user_email ); ?>">
 									</div>
 									<div class="form-group">
 										<label for="birthday" class="text-white">Birthday</label>
@@ -91,7 +91,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									</div>      
 									<div class="form-group">
 										<label for="billing_phone" class="text-white">Phone</label>
-										<input type="phone" class="form-control" name="billing_phone" id="billing_phone" value="<?php echo esc_attr( get_user_meta($current_user->ID, 'billing_phone',true) ); ?>">
+										<input type="phone" class="form-control" autocomplete="tel" name="billing_phone" id="billing_phone" value="<?php echo esc_attr( get_user_meta($current_user->ID, 'billing_phone',true) ); ?>">
 									</div>
 									<div class="form-group">
 										<label for="country" class="text-white">Country</label>
@@ -112,15 +112,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 									</div>
 									<div class="form-group">
 										<label for="password_current" class="text-white">Current Password</label>
-										<input type="password" class="form-control" name="password_current" id="password_current" value="" autocomplete="off">
+										<input type="password" class="form-control" autocomplete="current-password" name="password_current" id="password_current" value="" autocomplete="off">
 									</div>	
 									<div class="form-group">
 										<label for="password_1" class="text-white">New Password</label>
-										<input type="password" class="form-control" name="password_1" id="password_1" value="" autocomplete="off">
+										<input type="password" class="form-control" autocomplete="new-password" name="password_1" id="password_1" value="" autocomplete="off">
 									</div>	
 									<div class="form-group">
 										<label for="password_2" class="text-white">Repeat Password</label>
-										<input type="password" class="form-control" name="password_2" id="password_2" value="" autocomplete="off">
+										<input type="password" class="form-control" autocomplete="new-password" name="password_2" id="password_2" value="" autocomplete="off">
 									</div>
 									<?php wp_nonce_field( 'save_account_details' ); ?>
 									<input type="submit" class="btn btn-primary btn-block" value="<?php esc_attr_e( 'Save', 'theme-my-login' ); ?>" name="save_account_details" id="submit">Guardar</button>

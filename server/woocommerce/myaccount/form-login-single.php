@@ -34,24 +34,24 @@ if ( ! defined( 'ABSPATH' ) ) {
             </div>
             <div class="container-wrapper pt-5 pb-5 pr-5 pl-5">
               <div class="row mb-4">
-                <div class="col-sm-6"><a href="#" class="btn btn-fb btn-sm btn-block" onclick="login_button_click('facebook','http://nenemi.com/')">Registrate con Facebook</a></div>
-                <div class="col-sm-6"><a href="#" class="btn btn-wc btn-sm btn-block" onclick="login_button_click('wechat','http://nenemi.com/')">Registrate con We Chat</a></div>
+                <div class="col-sm-6"><a href="#" class="btn btn-fb btn-sm btn-block" onclick="login_button_click('facebook','http://nenemi.com/')"><?php esc_html_e( 'Login with Facebook', 'woocommerce' ); ?></a></div>
+                <div class="col-sm-6"><a href="#" class="btn btn-wc btn-sm btn-block" onclick="login_button_click('wechat','http://nenemi.com/')"><?php esc_html_e( 'Login with WeChat', 'woocommerce' ); ?></a></div>
               </div>
-              <form method="post">
+              <form method="post" autocomplete="on">
                 <?php do_action( 'woocommerce_login_form_start' ); ?>
                 <div class="form-group">
                   <label for="username">Email</label>
-                  <input type="text" name="username" id="username" class="form-control" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" >
+                  <input type="text" name="username" autocomplete="username email" required id="username" class="form-control" value="<?php echo ( ! empty( $_POST['username'] ) ) ? esc_attr( wp_unslash( $_POST['username'] ) ) : ''; ?>" >
                 </div>
                 <div class="form-group">
                   <label for="password">Password</label>
-                  <input type="password" class="form-control" name="password" id="password" autocomplete="off">
+                  <input type="password" class="form-control" name="password" required autocomplete="password" id="password" autocomplete="off">
                 </div>
                 <?php do_action( 'woocommerce_login_form' ); ?>
                 <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
                 <div class="form-check form-check-inline">
                   <input class="form-check-input" name="rememberme" type="checkbox" id="rememberme" value="forever">
-                  <label class="form-check-label" for="rememberme">Recordar contraseña</label>
+                  <label class="form-check-label" for="rememberme"><?php esc_html_e( 'Remember me?', 'woocommerce' ); ?></label>
                 </div>
                 <div class="form-check form-check-inline right">
                   <a href="<?php echo esc_url( wp_lostpassword_url() ); ?>"><?php esc_html_e( 'Lost your password?', 'woocommerce' ); ?></a>
