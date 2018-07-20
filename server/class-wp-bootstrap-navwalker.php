@@ -138,6 +138,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			}
 			if ( in_array( 'current-menu-item', $classes, true ) || in_array( 'current-menu-parent', $classes, true ) ) {
 				$classes[] = 'active';
+				if($args->theme_location == 'profile_menu') {
+					$profile_menu_active = ' dashboard__nav-item--active';
+				}
 			}
 
 			// Add some additional default classes to the item.
@@ -195,6 +198,10 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 					$atts['class'] = 'dropdown-item';
 				} else {
 					$atts['class'] = 'nav-link';
+    				if($args->theme_location == 'profile_menu') {
+					$atts['class'] .= ' dashboard__nav-item' . $profile_menu_active;
+    				}
+
 				}
 			}
 

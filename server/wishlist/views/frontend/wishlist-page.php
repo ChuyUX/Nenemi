@@ -13,25 +13,7 @@ global $premmerce_wishlist_frontend;
 
 ?>
 
-<div class="row no-gutters">
-    <div class="col-md-3 col-lg-2 dashboard__sidebar">
-        <div class="dashboard__sidebar-wrapper">
-            <ul class="nav flex-column dashboard__nav">
-              <li class="nav-item">
-                <a class="nav-link dashboard__nav-item" href="#">Profile</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link dashboard__nav-item dashboard__nav-item--active" href="#">Wishlist</a>
-              </li>
-                <li class="nav-item">
-                <a class="nav-link dashboard__nav-item" href="#">Bookings</a>
-              </li>
-                <li class="nav-item">
-                <a class="nav-link dashboard__nav-item" href="#">Settings</a>
-              </li>
-            </ul>
-        </div>
-    </div>
+<?php do_action( 'woocommerce_account_navigation' );  ?>
 
 
 <?php if (count($wishlists) == 0): ?>
@@ -82,6 +64,7 @@ global $premmerce_wishlist_frontend;
                                 'post_type' => 'product',
                                 'post__in' => $productsIds
                             ); 
+                            echo "<pre>" . print_r($productsIds) . "</pre>";
                             $apiUrl = site_url('wp-json/premmerce/wishlist/delete/');
                             set_query_var( 'args', $args );
                             set_query_var( 'apiUrl', $apiUrl );

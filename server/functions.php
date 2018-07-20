@@ -63,6 +63,7 @@ add_action('wp_footer', 'footer_scripts');
 function menus() {
     register_nav_menu('main_menu',__( 'Main Menu' ));
     register_nav_menu('footer_menu',__( 'Footer Menu' ));
+    register_nav_menu('profile_menu',__( 'Profile Menu' ));
 }
 add_action( 'init', 'menus' );
 
@@ -160,6 +161,31 @@ function settings_rewrite_rules() {
 }
 add_action( 'wp_loaded', 'settings_rewrite_rules' );
 
+add_filter( 'wp_nav_menu_items', 'items_login_logout', 10, 2);
 
+function items_login_logout( $items, $args ) {
 
+    if ($args->theme_location == 'main_menu') {
+        if (is_user_logged_in())
+        {
+            $items .= '<li class="menu-item">
+                        <a href="' . get_permalink(get_option("woocommerce_myaccount_page_id")) .'" class="nav-link">'. __("My account") .'</a>
+                        </li>';
+            $items .= '<li class="menu-item">
+                        <a href="'. wp_logout_url(get_permalink()) .'" class="nav-link">'. __("Log Out") .'</a>
+                        </li>';
+        }
+        else
+        {
+            $items .= '<li class="menu-item">
+                        <a href="'.  get_permalink(get_option("woocommerce_myaccount_page_id")) .'" class="nav-link">'. __("Log In") .'</a>
+                        </li>';
+            $items .= '<li class="menu-item">
+                        <a href="' . get_permalink(get_option("woocommerce_myaccount_page_id")) .'?action=register" class="nav-link">'. __("Register") .'</a>
+                        </li>';
+        }
+    }
+
+    return $items;
+}
 ?>

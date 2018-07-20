@@ -23,24 +23,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 do_action( 'woocommerce_before_account_navigation' );
 ?>
 
+
+
+
+
 <main>
 	<div class="row no-gutters">
 		<nav class="col-md-3 col-lg-2 dashboard__sidebar">
 			<div class="dashboard__sidebar-wrapper">
-				<ul class="nav flex-column dashboard__nav">
-				  <li class="nav-item">
-				    <a class="nav-link dashboard__nav-item dashboard__nav-item--active" href="<?php echo esc_url(wc_get_page_permalink( 'myaccount' ))?>">Profile</a>
-				  </li>
-				  <li class="nav-item">
-				    <a class="nav-link dashboard__nav-item" href="/wishlists">Wishlist</a>
-				  </li>
-					<li class="nav-item">
-				    <a class="nav-link dashboard__nav-item" href="<?php echo esc_url(wc_get_endpoint_url('orders'));?>">Bookings</a>
-				  </li>
-					<li class="nav-item">
-				    <a class="nav-link dashboard__nav-item" href="#">Settings</a>
-				  </li>
-				</ul>
+			<?php 
+			wp_nav_menu( array( 
+			    'theme_location' => 'profile_menu', 
+			    'menu_class' => 'nav flex-column dashboard__nav',
+				'depth' => 2,
+				'container' => false,
+				'walker' => new wp_bootstrap_navwalker()
+			    )
+			);  
+			?>
 			</div>
 		</nav>
 <?php do_action( 'woocommerce_after_account_navigation' ); ?>
