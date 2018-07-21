@@ -152,16 +152,6 @@ function add_date_order_items( $item, $cart_item_key, $values, $order ) {
 }
 add_action( 'woocommerce_checkout_create_order_line_item', 'add_date_order_items', 10, 4 );
 
-function settings_add_my_account_endpoint() {
-    add_rewrite_endpoint( 'settings', EP_PAGES );
-}
-add_action( 'init', 'settings_add_my_account_endpoint' );
-
-function settings_endpoint_content() {
-    include 'woocommerce/myaccount/settings.php'; 
-}
-add_action( 'woocommerce_account_settings_endpoint', 'settings_endpoint_content' );
-
 function product_sold_count() {
     global $product;
     $units_sold = get_post_meta( $product->get_id(), 'total_sales', true );
@@ -245,4 +235,70 @@ function my_pre_get_posts( $query ) {
 
 }
 
+function settings_add_my_account_endpoint() {
+    add_rewrite_endpoint( 'settings', EP_PAGES );
+}
+add_action( 'init', 'settings_add_my_account_endpoint' );
+
+function settings_endpoint_content() {
+    include 'woocommerce/myaccount/settings.php'; 
+}
+add_action( 'woocommerce_account_settings_endpoint', 'settings_endpoint_content' );
+
+/**
+ * Set the users language based upon their choice at settings
+ */
+add_action( 'wpml_language_has_switched', 'change_default_language' ); 
+function change_default_language() {
+    if ( is_user_logged_in() && get_user_meta(get_current_user_id(), 'language', false) ) {
+        #update_user_meta( get_current_user_id(), 'language', ICL_LANGUAGE_CODE );
+    }
+}
+
+add_action( 'init', 'set_user_default_language' );
+function set_user_default_language() {
+    if ( is_user_logged_in() &&  (isset($_POST['language']) || get_user_meta(get_current_user_id(), 'language', false) ) ) {
+        /* Don't trust this
+        if( isset($_POST['language']) ){
+            if( get_user_meta( get_current_user_id(), 'language', true ) ){
+                update_user_meta( get_current_user_id(), 'language', $_POST['language'] );    
+            }
+            else{
+                add_user_meta( get_current_user_id(), 'language', $_POST['language'] ); 
+            }
+        }
+
+        $get_language = get_user_meta( get_current_user_id(), 'language', true );
+        
+        if($get_language != ICL_LANGUAGE_CODE){
+            $url =  "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+            $escaped_url = esc_url( $url );
+            header('Location: ' . esc_url(apply_filters('wpml_permalink', $escaped_url, $get_language ) ) );
+            do_action('wpml_switch_language', $get_language);
+            #echo $escaped_url; 
+        }
+        */
+    }
+}
+
+
+/**
+ * Set the users currency based upon their choice at settings
+ */
+add_action( 'wcml_switch_currency', 'set_default_currency');
+function set_default_currency($new_currency) {
+    if ( is_user_logged_in() && get_user_meta(get_current_user_id(), 'currency', false) ) {
+        update_user_meta( get_current_user_id(), 'currency', $new_currency ); 
+    }
+}
+
+add_filter( 'wcml_client_currency', 'modify_client_currency', 10, 1 );
+ function modify_client_currency( $currency ) {
+    if ( is_user_logged_in() && get_user_meta(get_current_user_id(), 'currency', false) ) {
+        return get_user_meta( get_current_user_id(), 'currency', true );
+    }
+    else {
+        return $currency;
+    }
+}
 ?>
