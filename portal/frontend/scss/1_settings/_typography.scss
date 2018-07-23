@@ -1,0 +1,28 @@
+/*
+$font-size-base:   16px ;
+$font-size-xsmall: ceil(($font-size-base * 0.75)); // 12px
+$font-size-small:  ceil(($font-size-base * 0.85)); // 14px
+$font-size-medium: ceil(($font-size-base * 1.125)); // 18px
+
+$font-size-h1: floor(($font-size-base * 3)) ; // 48px
+$font-size-h2: floor(($font-size-base * 2.875)) ; // 46px
+$font-size-h3: floor(($font-size-base * 2.5)); // 40px
+$font-size-h4: floor(($font-size-base * 2.375)); // 38px
+$font-size-h5: floor(($font-size-base * 2.125)); // 34px
+$font-size-h6: floor(($font-size-base * 1.8125)); // 29px
+
+
+$font-family-sans-serif:;
+$font-family-serif:     ;
+
+$text-color: ;
+
+$headings-color:       ;
+*/
+$font-family-base:            'Bariol';
+
+$h1-font-size:                $font-size-base * 2.8;
+$h6-font-size:                $font-size-base * 1.2;
+
+$headings-font-family:        'DIN';
+$headings-color:              #3C4249;

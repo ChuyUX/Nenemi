@@ -1,0 +1,131 @@
+.dashboard{
+  background: white;
+  border-left: 1px solid #D8D8D8;
+}
+.dashboard__sidebar{
+  background: #F9F9F9;
+}
+.dashboard__sidebar-wrapper{
+  padding: 30px 0;
+}
+.dashboard__nav-item{
+  color: #454D57;
+  font-size: $h6-font-size;
+}
+.dashboard__nav-item--active{
+  color: $primary;
+}
+.dashboard__nav-item:hover{
+  color: $primary;
+}
+.dashboard__headline{
+  border-bottom: 1px solid #D8D8D8;
+  padding: 30px 10px;
+}
+.dashboard__headline *{
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.dashboard__headline h3{
+  color: $primary;
+  margin: 0;
+}
+.dashboard__headline--profile{
+  background-color: $primary;
+  padding-bottom: 60px;
+}
+.dashboard__content{
+  padding: 30px 10px 100px;
+}
+.dashboard__actions{
+  display: none;
+}
+.dashboard__content--actions .dashboard__actions{
+  display: block;
+}
+.dashboard__content--bg{
+  @extend %bg-cover;
+  position: relative;
+}
+.dashboard__content--bg:before{
+  @extend %overlay;
+  background: rgba(0,0,0,0.5);
+  content: " ";
+}
+.dashboard__sidebtn{
+  margin: 0;
+  position: relative;
+}
+.dashboard__sidebtn .form-control{
+  font-size: $font-size-sm;
+  padding: 5px 10px;
+}
+.dashboard__sidebtn button{
+  background: none;
+  border: none;
+  color: #979797;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  top: 6px;
+}
+
+.profile{
+  margin-top: -98px;
+}
+.profile__picture-wrapper{
+  display: inline-block;
+  position: relative;
+}
+.profile__picture{
+  border: 5px solid #9b9b9b;
+  border-radius: 50%;
+  height: 136px;
+  width: 136px;
+}
+.profile__field{
+  color: white;
+  font-family: $font-family-base;
+  font-weight: 300;
+}
+.profile__edit{
+  background: white;
+  border: 1px solid #9B9B9B;
+  border-radius: 50%;
+  color: $headings-color;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  right: -5px;
+  text-align: center;
+  top: 25px;
+  width: 30px;
+}
+
+@include media-breakpoint-up(md) {
+  .dashboard__headline{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .dashboard__headline *{
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+@include media-breakpoint-up(md) {
+  .dashboard__headline{
+    padding: 30px;
+  }
+  .dashboard__content{
+    padding: 30px 30px 100px;
+  }
+}

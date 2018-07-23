@@ -1,0 +1,26 @@
+.page-item{
+  margin-right: 10px;
+}
+.page-link{
+  border-color: $primary;
+  border-radius: 3px;
+  color: $primary;
+  font-weight: bold;
+  padding: 7px 12px;
+}
+.page-link:hover{
+  background: $primary;
+  border-color: $primary;
+  color: white;
+}
+.page-nav .page-link{
+  background: none;
+  border: none;
+}
+.page-nav .page-link:hover{
+  color: $primary;
+}
+.page-item.active .page-link{
+  background: $primary;
+  border-color: $primary;
+}

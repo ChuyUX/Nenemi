@@ -1,0 +1,36 @@
+.post{
+  margin-bottom: 30px;
+}
+.post__title{
+  margin: 0;
+}
+.post__title a{
+  color: $headings-color;
+}
+.post__title a:hover{
+  color: $primary;
+  text-decoration: none;
+}
+.post__date{
+  color: $input-border-color;
+}
+.p-icon__item{
+  line-height: 1.125;
+  margin-bottom: 30px;
+  padding-right: 10px;
+}
+.p-icon__icon{
+  float: left;
+  font-size: 1.7rem;
+  margin-right: 9px;
+}
+.post-listed{
+  display: flex;
+  margin-bottom: 15px;
+}
+.post-listed__thumbnail{
+  margin-right: 10px;
+}
+.post-listed:last-child{
+  margin-bottom: 0;
+}

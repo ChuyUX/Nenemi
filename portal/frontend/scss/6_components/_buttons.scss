@@ -1,0 +1,52 @@
+.btn{
+  font-size: $input-btn-font-size;
+  font-weight: bold;
+}
+.btn > .icon{
+  margin-left: 8px;
+  position: relative;
+  top: calc(50% - .5rem);
+}
+.btn-sm{
+  font-size: $font-size-sm;
+  font-weight: normal;
+  padding: .42rem 1rem .38rem;
+}
+.btn-sm-icon{
+  padding: .15rem 1rem .35rem;
+  position: relative;
+}
+.btn.btn-sm > .icon{
+  font-size: 1.25rem;
+  margin-left: 0;
+  margin-right: 2px;
+  position: relative;
+  top: 5px;
+}
+.btn-secondary,
+.btn-fb,
+.btn-wc{
+  color: white;
+}
+.btn-fb{
+  background: $facebook-color;
+}
+.btn-wc{
+  background: $wechat-color;
+}
+.btn-light{
+  background: white;
+  color: $primary;
+}
+.btn-icon{
+  background: none;
+  color: $input-border-color;
+  border: none;
+  font-size: 1.75rem;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+.btn-outline-primary.bg-white:hover{
+  color: $primary;
+}

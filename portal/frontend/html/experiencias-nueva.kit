@@ -1,0 +1,391 @@
+<!-- @import "inc/head.kit" -->
+<body>
+	<!-- @import "inc/header.kit" -->
+	<main>
+		<div class="container-fluid pl-0 pr-0">
+			<div class="row no-gutters">
+				<div class="col-sm-3 pt-4 pb-4 sidebar">
+					<nav class="nav flex-column">
+					  <a class="nav-link active" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-border-all"></use></svg> Dashboard
+						</a>
+					  <a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-pin"></use></svg> Actividades
+						</a>
+					  <a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-inbox-check"></use></svg> Órdenes
+						</a>
+					  <a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-ticket"></use></svg> Check-In
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-chat-bubble-dots"></use></svg> Comentarios
+						</a>
+					</nav>
+				</div>
+				<div class="col-sm-9 pt-4">
+					<div class="main__content">
+						<div class="row">
+							<div class="col-md-8">
+								<form id="add_experiencie" enctype="multipart/form-data" method="post">
+									<div id="step_0" class="step" style="display: block;">
+										<h3>Comienza a crear tu experiencia</h3>
+										<p>Empieza poniendo un título a tu experiencia y despues una breve descripción contandole a tus viajeros lo que podrán vivir en este viaje.</p>
+										<div class="form-group">
+									    <label for="titulo">Nombre</label>
+									    <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Escribe el título de tu experiencia" required>
+									  </div>
+										<div class="form-group">
+											<label for="content">Descripción:</label>
+											<textarea name="content" id="content" placeholder="Recuerda incluir actividades, describir el lugar en donde estarán, sugerir lugares en donde podrán pasar momentos agradables ya sea solo o en compañia, ten en cuenta que tendras diversos tipos de viajeros y todos deben de terner una experiencia inolviable." class="form-control" rows="8" cols="80" required></textarea>
+										</div>
+										<div class="form-group">
+											<label for="content">Categoría:</label>
+											<select class="custom-select">
+											  <option selected>Selecciona</option>
+											  <option value="1">Hotel</option>
+											  <option value="2">Restaurante</option>
+											  <option value="3">Tienda</option>
+												<option value="4">Tour y/o Taller</option>
+												<option value="5">Atracción Turística</option>
+												<option value="6">Transporte</option>
+											</select>
+										</div>
+										<div class="row justify-content-between mb-5">
+											<div class="col-4">
+
+											</div>
+											<div class="col-4 text-right">
+												<a href="#" class="btn btn-primary js-nextstep">Continuar</a>
+											</div>
+										</div>
+									</div>
+									<div id="step_1" class="step" style="display: none;">
+										<h3>Agregar imagen destacada</h3>
+										<p>Las imagenes son parte fundamental para los viajeros, con ellas podemos dar una idea del lugar en donde estarán o las experiencias que vivirán, por eso es tan importante, recuerda que una imagen puede recibir más reservaciones.</p>
+										<p class="text-primary mb-0">Consejos</p>
+										<div class="row">
+											<div class="col-md">
+												<ul class="checklist">
+													<li>Procura subir imagenes de buena calidad</li>
+													<li>Elije que las fotos sean de lugares iluminados</li>
+													<li>Utiliza imagenes dinamicas, coloridas, alegres que muestren lugares, personas y cosas</li>
+												</ul>
+											</div>
+											<div class="col-md">
+												<ul class="checklist">
+													<li>Evita las imágenes con texto </li>
+													<li>Si vas a tomar las fotos evita el flash al momento de capturar la imágen</li>
+													<li>Recuerda no incluir bebidas alcoholicas o menores de edad.</li>
+												</ul>
+											</div>
+										</div>
+										<div id="featured_image" class="dropzone mb-3 mt-3"></div>
+										<div class="row justify-content-between mb-5">
+											<div class="col-md"><a href="#" class="btn btn-outline-primary js-prevstep">Atrás</a></div>
+											<div class="col-md text-right">
+												<a href="#" class="btn btn-primary js-nextstep">Continuar</a>
+											</div>
+										</div>
+									</div>
+									<div id="step_2" class="step" style="display: none;">
+										<h3>Agregar imagenes a galerías</h3>
+										<p>Ahora que ya tienes tu imagen principal vamos a complementar con un album, en donde muestres con mas detalle lo que podrán experimentar, como platillos, actividades fisicas, atracciones turisticas, hoteles, entre más.</p>
+										<p class="text-primary mb-0">Consejos</p>
+										<div class="row">
+											<div class="col-md">
+												<ul class="checklist">
+													<li>Procura subir imagenes de buena calidad</li>
+													<li>Elije que las fotos sean de lugares iluminados</li>
+													<li>Utiliza imagenes dinamicas, coloridas, alegres que muestren lugares, personas y cosas</li>
+												</ul>
+											</div>
+											<div class="col-md">
+												<ul class="checklist">
+													<li>Evita las imágenes con texto </li>
+													<li>Si vas a tomar las fotos evita el flash al momento de capturar la imágen</li>
+													<li>Recuerda no incluir bebidas alcoholicas o menores de edad.</li>
+												</ul>
+											</div>
+										</div>
+										<div id="gallery" class="dropzone mb-3 mt-3"></div>
+										<div class="row justify-content-between mb-5">
+											<div class="col-md"><a href="#" class="btn btn-outline-primary js-prevstep">Atrás</a></div>
+											<div class="col-md text-right">
+												<a href="#" class="btn btn-primary js-nextstep">Continuar</a>
+											</div>
+										</div>
+									</div>
+									<div id="step_3" class="step" style="display: none;">
+										<h3>Incluir video</h3>
+										<p>Para una descripción más amplia de lo que vas a ofrecer puedes agregar no solo imagenes sino también un video, para mostrar pequeños tours de los diferentes lugares.</p>
+										<div class="form-group">
+											<label for="video">URL</label>
+									    <input type="text" class="form-control" name="video" id="video" placeholder="Yoube o Vimeo" required>
+										</div>
+										<div class="row justify-content-between mb-5">
+											<div class="col-md"><a href="#" class="btn btn-outline-primary js-prevstep">Atrás</a></div>
+											<div class="col-md text-right">
+												<a href="#" class="btn btn-primary js-nextstep">Continuar</a>
+											</div>
+										</div>
+									</div>
+									<div id="step_4" class="step" style="display: none;">
+										<h3>Cada experiencia tiene ciertas características,
+¿Cuales son las tuyas?</h3>
+										<p>Las características de las experiencias ayudan a los viajeros a encontrar de manera mas rapida y facil lo que quieren vivir, es por ello que te pedimos que selecciones las caracteristicas, para mejorar la experiencia de los viajeros y la tuya.</p>
+										<div class="p-3 border rounded mb-3">
+											<div class="row">
+												<div class="col-md">
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="no_cancelation">
+													  <label class="custom-control-label" for="no_cancelation">Sin cancelación</label>
+													</div>
+												</div>
+												<div class="col-md">
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="show_voucher">
+													  <label class="custom-control-label" for="show_voucher">Mostrar voucher digital o impreso</label>
+													</div>
+												</div>
+
+											</div>
+											<div class="row">
+												<div class="col-md">
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="open_date">
+													  <label class="custom-control-label" for="open_date">Ticket con fecha abierta</label>
+													</div>
+												</div>
+												<div class="col-md">
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="enter_direct">
+													  <label class="custom-control-label" for="enter_direct">Entrar directamente con voucher</label>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md">
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="meet_location">
+													  <label class="custom-control-label" for="meet_location">Reunirse en una locación específica</label>
+													</div>
+												</div>
+												<div class="col-md">
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="languages">
+													  <label class="custom-control-label" for="languages">Inglés / Chino</label>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md">
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="join_group">
+													  <label class="custom-control-label" for="join_group">Reunión en grupo</label>
+													</div>
+												</div>
+												<div class="col-md">
+													<div class="custom-control custom-checkbox">
+													  <input type="checkbox" class="custom-control-input" id="minimum_person">
+													  <label class="custom-control-label" for="minimum_person">Mínimo de 2 personas para reservar</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row justify-content-between mb-5">
+											<div class="col-md"><a href="#" class="btn btn-outline-primary js-prevstep">Atrás</a></div>
+											<div class="col-md text-right">
+												<a href="#" class="btn btn-primary js-nextstep">Continuar</a>
+											</div>
+										</div>
+									</div>
+									<div id="step_5" class="step" style="display: none;">
+										<h3>¿Cuales son opciones que tiene tu paquete?</h3>
+										<p>En esta parte daras nombre, descripción, precio, fecha y lo que incluye el paquete que estaras ofreciendo a los viajadores.</p>
+										<h5>Precio</h5>
+										<p>Rango promedio del precio que tendrá en paquete </p>
+										<div class="input-group mb-4">
+											<div class="input-group-append">
+												<span class="input-group-text font-weight-bold" style="border-top-left-radius: .25rem;
+border-bottom-left-radius: .25rem;border-right:none;">$</span>
+											</div>
+											<input type="number" class="form-control" name="price" id="price">
+											<div class="input-group-append">
+												<span class="input-group-text font-weight-bold">MX</span>
+											</div>
+										</div>
+										<h5>Fecha de disponibilidad</h5>
+										<p>Describe las actividades y lo que podrán visitar cuando lleguen a su destino</p>
+										<div class="row mb-4">
+											<div class="col-md">
+												<div class="input-group" id="startdate_0" data-target-input="nearest">
+													<input type="text" class="form-control datetimepicker-input" data-target="#startdate_0" name="startdate" id="startdate">
+													<div class="input-group-append" data-target="#startdate_0" data-toggle="datetimepicker">
+														<span class="input-group-text font-weight-bold">
+															<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-calendar"></use></svg>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md">
+												<div class="input-group" id="enddate_0" data-target-input="nearest">
+													<input type="text" class="form-control datetimepicker-input" data-target="#enddate_0" name="enddate" id="enddate">
+													<div class="input-group-append" data-target="#enddate_0" data-toggle="datetimepicker">
+														<span class="input-group-text font-weight-bold">
+															<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-calendar"></use></svg>
+														</span>
+													</div>
+												</div>
+											</div>
+										</div>
+										<h5>Qué incluye</h5>
+										<div class="form-group">
+											<textarea name="incluye" id="incluye" class="form-control" rows="3" cols="80" required></textarea>
+										</div>
+										<div id="more_pckgs"></div>
+										<div class="text-right mb-5">
+											<p class="mb-1 small">¿Tienes otro paquete?</p>
+											<a href="#" class="btn btn-secondary btn-sm btn-sm-icon js-addPckg">
+												<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-plus-rounded"></use></svg>
+												Agregar otro
+											</a>
+										</div>
+										<div class="row justify-content-between mb-5">
+											<div class="col-md"><a href="#" class="btn btn-outline-primary js-prevstep">Atrás</a></div>
+											<div class="col-md text-right">
+												<a href="#" class="btn btn-primary js-nextstep">Continuar</a>
+											</div>
+										</div>
+									</div>
+									<div id="step_6" class="step" style="display: none;">
+										<h3>Las Politicas son algo que no debes de olvidar</h3>
+										<p>Aquí escribiras las polticas para las Actividades y la Cancelación, esto es una parte muy importante, ya que estableceras limites o beneficios tanto para los viajeros como para ti.</p>
+										<div class="form-group">
+											<label for="content">Contratación:</label>
+											<textarea name="contratacion" id="contratacion" class="form-control" rows="8" cols="80" required></textarea>
+										</div>
+										<div class="form-group">
+											<label for="content">Cancelación:</label>
+											<textarea name="cancelation" id="cancelation" class="form-control" rows="8" cols="80" required></textarea>
+										</div>
+										<div class="row justify-content-between mb-5">
+											<div class="col-md"><a href="#" class="btn btn-outline-primary js-prevstep">Atrás</a></div>
+											<div class="col-md text-right">
+												<a href="#" class="btn btn-primary js-nextstep">Continuar</a>
+											</div>
+										</div>
+									</div>
+									<div id="step_7" class="step" style="display: none;">
+										<h3>¿Dónde estas ubicado?</h3>
+										<p>Mostrar tu ubicación hará que los viajeros estén más seguros y tranquilos al momento de ir a vivir su experiencia, porque sabrán exactamente en donde estarán ubicados. </p>
+										<div class="row">
+											<div class="col-md">
+												<div class="form-group">
+											    <label for="calle">Calle y Número</label>
+											    <input type="text" class="form-control" name="calle" id="calle" required>
+											  </div>
+											</div>
+											<div class="col-md">
+												<div class="form-group">
+											    <label for="calle">Colonia</label>
+											    <input type="text" class="form-control" name="calle" id="colonia">
+											  </div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md">
+												<div class="form-group">
+											    <label for="calle">Ciudad</label>
+											    <input type="text" class="form-control" name="calle" id="city" required>
+											  </div>
+											</div>
+											<div class="col-md">
+												<div class="form-group">
+													<label for="content">Estado</label>
+													<select class="custom-select">
+													  <option selected>Selecciona</option>
+													  <option value="1">Ciudad de México</option>
+													  <option value="2">Guanajuato</option>
+													  <option value="3">Jalisco</option>
+														<option value="4">Puebla</option>
+														<option value="5">Nuevo León</option>
+														<option value="6">Quintana Roo</option>
+														<option value="7">Yucatán</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row justify-content-between mb-5">
+											<div class="col-md"><a href="#" class="btn btn-outline-primary js-prevstep">Atrás</a></div>
+											<div class="col-md text-right">
+												<a href="#" class="btn btn-primary js-nextstep">Continuar</a>
+											</div>
+										</div>
+									</div>
+									<div id="step_8" class="step" style="display: none;">
+										<h3>No dejemos a los viajeros con dudas</h3>
+										<p>Las dudas es lo que mas tendras nuestros viajeros si es su primera vez comprando este tipo de experiencias es por ello que te invitemos a que des respuesta a las preguntas más frecuentes que podrián hacer</p>
+										<div class="form-group">
+											<label for="pregunta_0">Pregunta</label>
+											<input type="text" class="form-control" name="pregunta_0" id="pregunta_0" required>
+										</div>
+										<div class="form-group">
+											<label for="respuesta_0">Respuesta</label>
+											<textarea name="respuesta_0" id="respuesta_0" class="form-control" rows="8" cols="80" required></textarea>
+										</div>
+										<div id="more_faqs">
+
+										</div>
+										<div class="text-right mb-5">
+											<a href="#" class="btn btn-secondary btn-sm btn-sm-icon js-addFaq">
+												<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-plus-rounded"></use></svg>
+												Agregar otra
+											</a>
+										</div>
+										<div class="row justify-content-between mb-5">
+											<div class="col-md"><a href="#" class="btn btn-outline-primary js-prevstep">Atrás</a></div>
+											<div class="col-md text-right">
+												<a href="#" class="btn btn-primary js-nextstep">Continuar</a>
+											</div>
+										</div>
+									</div>
+									<div id="step_9" class="step" style="display: none;">
+										<h3>Finalizar</h3>
+										<p>Estas casi listo para recibir al mercado asiático.</p>
+										<div class="custom-control custom-checkbox mb-3">
+											<input type="checkbox" class="custom-control-input" id="instant_confirmation">
+											<label class="custom-control-label" for="instant_confirmation">Las confirmaciones de reservaciones serán instantaneas</label>
+										</div>
+										<button type="submit" class="btn btn-primary">Finalizar</button>
+									</div>
+								</form>
+								<div id="final_step" class="step" style="display: none;">
+									<div class="text-center">
+										<h3>FELICIDADES</h3>
+										<p>Haz terminado todos los pasos, ahora ya estas listo para ser un gran vendedor de experiencias, recueda que lo mas importante es que los viajeros disfruten a lo maximo todo lo que le estas ofreciendo</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="steps-timeline">
+									<div class="steps-timeline__item">Información General</div>
+									<div class="steps-timeline__item">Imagen Destacada</div>
+									<div class="steps-timeline__item">Galería</div>
+									<div class="steps-timeline__item">Video</div>
+									<div class="steps-timeline__item">Características</div>
+									<div class="steps-timeline__item">Paquetes</div>
+									<div class="steps-timeline__item">Políticas</div>
+									<div class="steps-timeline__item">Ubicación</div>
+									<div class="steps-timeline__item">Preguntas Frecuentes</div>
+									<div class="steps-timeline__item">Finalizar</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- @import "inc/footer.kit" -->

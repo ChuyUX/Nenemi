@@ -1,0 +1,42 @@
+.filter{
+  display: inline-block;
+  margin-right: 16px;
+  position: relative;
+}
+.filter__modal{
+  background: white;
+  border: 1px solid #979797;
+  border-radius: 4px;
+  display: none;
+  padding: 15px;
+  position: absolute;
+  top: calc(100% + 24px);
+  width: 250px;
+  z-index: 4;
+}
+.filter__modal .form-check{
+  margin-bottom: 8px;
+}
+.filter__modal .form-check label{
+  color: #9B9B9B;
+  font-weight: bold;
+}
+.filter__modal .btn-link{
+  padding: 0;
+}
+.filter__modal .btn-link--off{
+  color: $headings-color;
+}
+.filter__modal .btn-link--off:hover{
+  background: none;
+  border-color: transparent;
+}
+.results-list{
+  position: relative;
+}
+.results-list--overlay:before{
+  background: rgba(0,0,0,0.6);
+  content: " ";
+  @extend %overlay;
+  z-index: 2;
+}

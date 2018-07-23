@@ -1,0 +1,23 @@
+.widget{
+  border-bottom: 4px solid $headings-color;
+  margin-bottom: 30px;
+  padding-bottom: 34px;
+}
+.widget__title{
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.widget__content{
+
+}
+.widget__content p{
+  margin: 0;
+}
+.widget__nav{
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+.widget__nav a, .widget ul a{
+  color: $body-color;
+}

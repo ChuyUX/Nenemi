@@ -1,0 +1,29 @@
+.steps-timeline{
+  border-left: 5px solid #D8D8D8;
+  color: #9B9B9B;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+.steps-timeline__item{
+  font-size: $h6-font-size;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+.steps-timeline__item:before{
+  background: #9B9B9B;
+  border-radius: 50%;
+  content: " ";
+  height: 22px;
+  left: -13px;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
+.steps-timeline__item--active{
+  color: $primary;
+}
+.steps-timeline__item--active:before{
+  background: $primary;
+}

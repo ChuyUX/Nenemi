@@ -1,0 +1,12 @@
+.dropzone{
+  background: url(../img/dropzone-bg.svg) no-repeat center;
+  background-size: 250px;
+  border: 1px solid #979797;
+  border-radius: 3px;
+  color: #9A9A9A;
+  font-size: 20px;
+  padding: 90px 20px;
+}
+.dropzone .dz-preview.dz-image-preview{
+  background: none;
+}

@@ -1,0 +1,14 @@
+.sidebar{
+  background: $primary;
+}
+.sidebar .nav-link{
+  color: white;
+}
+.sidebar .nav-link:hover, .sidebar .nav-link.active{
+  background: rgba(0,0,0,0.2);
+}
+.sidebar .nav-link .icon{
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}

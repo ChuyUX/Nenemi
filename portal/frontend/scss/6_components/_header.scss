@@ -1,0 +1,12 @@
+header{
+  background: white;
+  border-bottom: 2px solid $primary;
+}
+.header__logo{
+  background: $primary;
+  padding-bottom: 12px;
+  padding-top: 12px;
+}
+.profile__img{
+  border-radius: 50%;
+}

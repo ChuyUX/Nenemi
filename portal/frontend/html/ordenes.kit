@@ -1,0 +1,68 @@
+<!-- @import "inc/head.kit" -->
+<body>
+	<!-- @import "inc/header.kit" -->
+	<main>
+		<div class="container-fluid pl-0 pr-0">
+			<div class="row no-gutters">
+				<div class="col-sm-3 pt-4 pb-4 sidebar">
+					<nav class="nav flex-column">
+					  <a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-border-all"></use></svg> Dashboard
+						</a>
+					  <a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-pin"></use></svg> Actividades
+						</a>
+					  <a class="nav-link active" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-inbox-check"></use></svg> Órdenes
+						</a>
+					  <a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-ticket"></use></svg> Check-In
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-chat-bubble-dots"></use></svg> Comentarios
+						</a>
+					</nav>
+				</div>
+				<div class="col-sm-9 pt-4">
+					<div class="main__content">
+						<h3>Órdenes</h3>
+						<table id="table_orders" class="table table-striped">
+					    <thead>
+					        <tr>
+					            <th>Pedido</th>
+					            <th>Fecha</th>
+											<th>Método de Pago</th>
+											<th>Total</th>
+											<th>Estatus</th>
+					        </tr>
+					    </thead>
+					    <tbody>
+					        <tr>
+					            <td><b>#123</b><br>Jesús Granados<br>gjgranados@gmail.com</td>
+					            <td>15/03/2018</td>
+											<td>We Chat</td>
+											<td>$120 pesos</td>
+											<td><span class="badge badge-warning">Procesado</span></td>
+					        </tr>
+									<tr>
+					            <td><b>#456</b><br>Jesús Granados<br>gjgranados@gmail.com</td>
+					            <td>15/03/2018</td>
+											<td>Paypal</td>
+											<td>$120 pesos</td>
+											<td><span class="badge badge-success">Completado</span></td>
+					        </tr>
+									<tr>
+					            <td><b>#789</b><br>Jesús Granados<br>gjgranados@gmail.com</td>
+					            <td>15/03/2018</td>
+											<td>Tarjeta de Crédito</td>
+											<td>$120 pesos</td>
+											<td><span class="badge badge-danger">Cancelado</span></td>
+					        </tr>
+					    </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- @import "inc/footer.kit" -->

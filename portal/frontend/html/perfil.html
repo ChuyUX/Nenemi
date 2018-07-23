@@ -1,0 +1,152 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>Nenemi</title>
+	<!--
+	<link rel="shortcut icon" href="../img/icons/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="../img/icons/apple-touch-icon.png">
+	-->
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+	<header>
+		<div class="container-fluid">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-sm-3 header__logo">
+					<img src="../img/nenemi-wlogo.svg" alt="Nenemi">
+				</div>
+				<div class="col-sm-auto">
+					<div class="media profile__widget">
+						<img class="align-self-center profile__img" src="../img/dummy/avatar.jpg" alt="Generic placeholder image" width="50">
+						<div class="media-body">
+							<div class="dropdown">
+								<a href="#" class="btn dropdown-toggle profile__btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Eduardo Zenteno
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Mi Perfil</a>
+									<a class="dropdown-item" href="#">Salir</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<main>
+		<div class="row no-gutters">
+			<div class="col-md-3 col-lg-2 dashboard__sidebar">
+				<div class="dashboard__sidebar-wrapper">
+					<ul class="nav flex-column dashboard__nav">
+					  <li class="nav-item">
+					    <a class="nav-link dashboard__nav-item dashboard__nav-item--active" href="#">Profile</a>
+					  </li>
+					  <li class="nav-item">
+					    <a class="nav-link dashboard__nav-item" href="#">Wishlist</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link dashboard__nav-item" href="#">Bookings</a>
+					  </li>
+						<li class="nav-item">
+					    <a class="nav-link dashboard__nav-item" href="#">Settings</a>
+					  </li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-9 col-lg-10">
+				<div class="dashboard__headline dashboard__headline--profile">
+					<h3 class="text-white">Profile</h3>
+				</div>
+				<div class="dashboard__content dashboard__content--bg" style="background-image: url(../img/dummy/profile-bg.jpg);">
+					<div class="row justify-content-md-center">
+						<div class="col-lg-4 col-md-6 profile">
+							<div class="text-center pb-4">
+								<div class="profile__picture-wrapper">
+									<img src="../img/dummy/avatar.jpg" alt="Shiratori June" class="profile__picture mb-4">
+									<a href="#" class="profile__edit js-toggle-profile-edit">
+										<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-pencil"></use></svg>
+									</a>
+								</div>
+								<h4 class="text-white">Shiratori June</h4>
+							</div>
+							<div class="js-profile-display">
+								<div class="text-center text-white">
+									<div class="mb-4">
+										<p class="mb-2"><b>Email:</b></p>
+										<h5 class="profile__field">Lorem@ipsum.wer</h5>
+									</div>
+									<div class="mb-4">
+										<p class="mb-2"><b>Phone:</b></p>
+										<h5 class="profile__field">123-345-00-00</h5>
+									</div>
+									<div class="mb-4">
+										<p class="mb-2"><b>Country:</b></p>
+										<h5 class="profile__field">México</h5>
+									</div>
+									<a href="#" class="btn btn-primary js-toggle-profile-edit">Editar</a>
+								</div>
+							</div>
+							<div class="js-profile-edit" style="display:none;">
+								<form action="#">
+									<div class="form-group">
+										<label for="firstname" class="text-white">First Name</label>
+										<input type="text" class="form-control" name="firstname" id="firstname">
+									</div>
+									<div class="form-group">
+										<label for="lasttname" class="text-white">Last Name</label>
+										<input type="text" class="form-control" name="lasttname" id="lasttname">
+									</div>
+									<div class="form-group">
+										<label for="email" class="text-white">Email</label>
+										<input type="email" class="form-control" name="email" id="email">
+									</div>
+									<div class="form-group">
+										<label for="phone" class="text-white">Phone</label>
+										<input type="phone" class="form-control" name="phone" id="phone">
+									</div>
+									<div class="form-group">
+										<label for="country" class="text-white">Country</label>
+										<select class="custom-select">
+										  <option selected>Seleccionar</option>
+										  <option value="1">Mexico</option>
+										  <option value="2">Japan</option>
+										  <option value="3">China</option>
+											<option value="4">South Corea</option>
+										</select>
+									</div>
+									<button type="submit" class="btn btn-primary btn-block">Guardar</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="text-center footer__bottom">
+				<span class="d-block d-sm-inline-block">®Nenemi 2018. ©All rights reserved.</span>  <span class="d-none d-sm-inline">|</span>  <a href="#">Terms of service</a>.  | <a href="#">Privacy policy</a>.
+			</div>
+		</div>
+	</footer>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/moment.min.js"></script>
+	<script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="../js/dropzone.js"></script>
+	<script src="../js/datatables.min.js"></script>
+	<script src="../js/scripts.js"></script>
+	</body>
+	</html>
+	

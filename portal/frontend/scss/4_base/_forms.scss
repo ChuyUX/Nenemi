@@ -1,0 +1,16 @@
+.form-control{
+  font-size: $input-btn-font-size;
+}
+label{
+  color: #454D57;
+  font-family: $headings-font-family;
+  font-weight: bold;
+  margin-bottom: 1px;
+}
+.form-check{
+  margin-bottom: 30px;
+}
+.form-check label{
+  font-family: $font-family-base;
+  font-weight: normal;
+}

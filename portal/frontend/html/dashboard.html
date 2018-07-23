@@ -1,0 +1,258 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<meta charset="utf-8">
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>Nenemi</title>
+	<!--
+	<link rel="shortcut icon" href="../img/icons/favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="../img/icons/apple-touch-icon.png">
+	-->
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+	<header>
+		<div class="container-fluid">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-sm-3 header__logo">
+					<img src="../img/nenemi-wlogo.svg" alt="Nenemi">
+				</div>
+				<div class="col-sm-auto">
+					<div class="media profile__widget">
+						<img class="align-self-center profile__img" src="../img/dummy/avatar.jpg" alt="Generic placeholder image" width="50">
+						<div class="media-body">
+							<div class="dropdown">
+								<a href="#" class="btn dropdown-toggle profile__btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Eduardo Zenteno
+								</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Mi Perfil</a>
+									<a class="dropdown-item" href="#">Salir</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<main>
+		<div class="container-fluid pl-0 pr-0">
+			<div class="row no-gutters">
+				<div class="col-sm-3 pt-4 pb-4 sidebar">
+					<nav class="nav flex-column">
+						<a class="nav-link active" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-border-all"></use></svg> Dashboard
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-pin"></use></svg> Experiencias
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-inbox-check"></use></svg> Órdenes
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-ticket"></use></svg> Check-In
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-chat-bubble-dots"></use></svg> Comentarios
+						</a>
+					</nav>
+					
+				</div>
+				<div class="col-sm-9 pt-4">
+					<div class="main__content">
+						<h3 class="text-primary">Experiencias Recientes</h3>
+						<div class="row mb-3">
+							<div class="col-md-6">
+								<div class="grid-item" style="background-image:url(../img/dummy/thumbnail-460x360-1@2x.jpg);">
+									<div class="grid-item__content">
+										<h4 class="text-white mb-0">Exploring Mexico City</h4>
+										<div class="grid-item__meta mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="grid-item" style="background-image:url(../img/dummy/thumbnail-460x360-2@2x.jpg);">
+									<div class="grid-item__content">
+										<h4 class="text-white mb-0">Exploring Mexico City</h4>
+										<div class="grid-item__meta mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h3 class="text-primary">Comentarios</h3>
+						<div class="alert alert-light">
+						  <div class="media comment">
+								<img class="mr-3" src="../img/dummy/avatar.jpg" alt="Generic placeholder image" width="50">
+						  	<div class="media-body">
+						  		<p class="mb-0"><b>Jesús Granados</b></p>
+									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa accusantium iure, harum alias deleniti optio sed, facere ratione nesciunt?</p>
+									<div class="small mb-2">hace 30 minutos</div>
+									<a href="#" class="btn p-0">Responder</a>
+						  	</div>
+						  </div>
+						</div>
+						<div class="alert alert-light">
+						  <div class="media comment">
+								<img class="mr-3" src="../img/dummy/avatar.jpg" alt="Generic placeholder image" width="50">
+						  	<div class="media-body">
+						  		<p class="mb-0"><b>Jesús Granados</b></p>
+									<p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa accusantium iure, harum alias deleniti optio sed, facere ratione nesciunt?</p>
+									<div class="small mb-2">hace 30 minutos</div>
+									<a href="#" class="btn p-0">Responder</a>
+						  	</div>
+						  </div>
+						</div>
+						<h3 class="text-primary">Reporte del mes</h3>
+						<div class="row">
+							<div class="col-md-8 mb-3 mb-md-5">
+								<canvas id="chart-2"></canvas>
+							</div>
+							<div class="col-md-4 mb-3 mb-md-5">
+								<div class="alert alert-light text-center">
+									<h6>Órdenes</h6>
+									<h4>270</h4>
+								</div>
+								<div class="alert alert-light text-center">
+									<h6>Check-In's</h6>
+									<h4>270</h4>
+								</div>
+								<div class="alert alert-light text-center">
+									<h6>Ingresos</h6>
+									<h4>$1,234</h4>
+								</div>
+							</div>
+						</div>
+						<h3 class="text-primary">Órdenes Recientes</h3>
+						<table class="table table-striped mb-4">
+						  <thead>
+						    <tr>
+						      <th scope="col">Estatus</th>
+						      <th scope="col">Órden</th>
+						      <th scope="col">Fecha</th>
+						      <th scope="col">Total</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <th scope="row"><span class="badge badge-success">Completado</span></th>
+						      <td>#121 por Jesús Granados</td>
+						      <td>01/12/2018 13:30</td>
+						      <td>$1,200</td>
+						    </tr>
+						    <tr>
+						      <th scope="row"><span class="badge badge-warning">Procesado</span></th>
+						      <td>#122 por Eduardo Zenteno</td>
+						      <td>01/12/2018 13:30</td>
+						      <td>$1,200</td>
+						    </tr>
+						    <tr>
+						      <th scope="row"><span class="badge badge-danger">Cancelado</span></th>
+						      <td>#123 por Jesús Granados</td>
+						      <td>01/12/2018 13:30</td>
+						      <td>$1,200</td>
+						    </tr>
+						  </tbody>
+						</table>
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+						<script src="../js/utils.js"></script>
+						<script>
+							var presets = window.chartColors;
+							var utils = Samples.utils;
+							var inputs = {
+								min: 0,
+								max: 100,
+								count: 3,
+								decimals: 2,
+								continuity: 1
+							};
+
+							function generateData(config) {
+								return utils.numbers(Chart.helpers.merge(inputs, config || {}));
+							}
+
+							function generateLabels(config) {
+								return utils.months(Chart.helpers.merge({
+									count: inputs.count,
+									section: 3
+								}, config || {}));
+							}
+
+							var options = {
+								maintainAspectRatio: false,
+								spanGaps: false,
+								elements: {
+									line: {
+										tension: 0.000001
+									}
+								},
+								plugins: {
+									filler: {
+										propagate: false
+									}
+								},
+								scales: {
+									xAxes: [{
+										ticks: {
+											autoSkip: false,
+											maxRotation: 0
+										}
+									}]
+								}
+							};
+
+							[false, 'origin', 'start', 'end'].forEach(function(boundary, index) {
+
+								// reset the random seed to generate the same data for all charts
+								utils.srand(8);
+
+								new Chart('chart-' + index, {
+									type: 'line',
+									data: {
+										labels: generateLabels(),
+										datasets: [{
+											backgroundColor: utils.transparentize(presets.red),
+											borderColor: presets.red,
+											data: generateData(),
+											label: 'Dataset',
+											fill: boundary
+										}]
+									},
+									options: Chart.helpers.merge(options, {
+										title: {
+											text: 'fill: ' + boundary,
+											display: true
+										}
+									})
+								});
+							});
+						</script>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="container">
+			<div class="text-center footer__bottom">
+				<span class="d-block d-sm-inline-block">®Nenemi 2018. ©All rights reserved.</span>  <span class="d-none d-sm-inline">|</span>  <a href="#">Terms of service</a>.  | <a href="#">Privacy policy</a>.
+			</div>
+		</div>
+	</footer>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/popper.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/jquery.magnific-popup.min.js"></script>
+	<script src="../js/moment.min.js"></script>
+	<script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+	<script src="../js/dropzone.js"></script>
+	<script src="../js/datatables.min.js"></script>
+	<script src="../js/scripts.js"></script>
+	</body>
+	</html>
+	
