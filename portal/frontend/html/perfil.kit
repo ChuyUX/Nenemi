@@ -2,90 +2,59 @@
 <body>
 	<!-- @import "inc/header.kit" -->
 	<main>
-		<div class="row no-gutters">
-			<div class="col-md-3 col-lg-2 dashboard__sidebar">
-				<div class="dashboard__sidebar-wrapper">
-					<ul class="nav flex-column dashboard__nav">
-					  <li class="nav-item">
-					    <a class="nav-link dashboard__nav-item dashboard__nav-item--active" href="#">Profile</a>
-					  </li>
-					  <li class="nav-item">
-					    <a class="nav-link dashboard__nav-item" href="#">Wishlist</a>
-					  </li>
-						<li class="nav-item">
-					    <a class="nav-link dashboard__nav-item" href="#">Bookings</a>
-					  </li>
-						<li class="nav-item">
-					    <a class="nav-link dashboard__nav-item" href="#">Settings</a>
-					  </li>
-					</ul>
+		<div class="container-fluid pl-0 pr-0">
+			<div class="row no-gutters">
+				<div class="col-sm-3 pt-4 pb-4 sidebar">
+					<!-- @import "inc/sidebar.kit" -->
 				</div>
-			</div>
-			<div class="col-md-9 col-lg-10">
-				<div class="dashboard__headline dashboard__headline--profile">
-					<h3 class="text-white">Profile</h3>
-				</div>
-				<div class="dashboard__content dashboard__content--bg" style="background-image: url(../img/dummy/profile-bg.jpg);">
-					<div class="row justify-content-md-center">
-						<div class="col-lg-4 col-md-6 profile">
-							<div class="text-center pb-4">
-								<div class="profile__picture-wrapper">
-									<img src="../img/dummy/avatar.jpg" alt="Shiratori June" class="profile__picture mb-4">
-									<a href="#" class="profile__edit js-toggle-profile-edit">
-										<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-pencil"></use></svg>
-									</a>
-								</div>
-								<h4 class="text-white">Shiratori June</h4>
-							</div>
-							<div class="js-profile-display">
-								<div class="text-center text-white">
-									<div class="mb-4">
-										<p class="mb-2"><b>Email:</b></p>
-										<h5 class="profile__field">Lorem@ipsum.wer</h5>
-									</div>
-									<div class="mb-4">
-										<p class="mb-2"><b>Phone:</b></p>
-										<h5 class="profile__field">123-345-00-00</h5>
-									</div>
-									<div class="mb-4">
-										<p class="mb-2"><b>Country:</b></p>
-										<h5 class="profile__field">México</h5>
-									</div>
-									<a href="#" class="btn btn-primary js-toggle-profile-edit">Editar</a>
+				<div class="col-sm-9 pt-4">
+					<div class="main__content">
+						<h3>Perfil</h3>
+						<form action="#" class="mb-5">
+							<div class="media mb-3">
+								<img class="align-self-center mr-3" src="../img/dummy/avatar.jpg" alt="Generic placeholder image" width="50">
+								<div class="media-body">
+									<input type="file" name="" value="" class="form-control">
 								</div>
 							</div>
-							<div class="js-profile-edit" style="display:none;">
-								<form action="#">
+							<div class="row">
+								<div class="col-md">
 									<div class="form-group">
-										<label for="firstname" class="text-white">First Name</label>
-										<input type="text" class="form-control" name="firstname" id="firstname">
+										<label for="firstname">First Name</label>
+										<input type="text" class="form-control" name="firstname" id="firstname" value="Eduardo">
 									</div>
+								</div>
+								<div class="col-md">
 									<div class="form-group">
-										<label for="lasttname" class="text-white">Last Name</label>
-										<input type="text" class="form-control" name="lasttname" id="lasttname">
+										<label for="lasttname">Last Name</label>
+										<input type="text" class="form-control" name="lasttname" id="lasttname" value="Zenteno">
 									</div>
-									<div class="form-group">
-										<label for="email" class="text-white">Email</label>
-										<input type="email" class="form-control" name="email" id="email">
-									</div>
-									<div class="form-group">
-										<label for="phone" class="text-white">Phone</label>
-										<input type="phone" class="form-control" name="phone" id="phone">
-									</div>
-									<div class="form-group">
-										<label for="country" class="text-white">Country</label>
-										<select class="custom-select">
-										  <option selected>Seleccionar</option>
-										  <option value="1">Mexico</option>
-										  <option value="2">Japan</option>
-										  <option value="3">China</option>
-											<option value="4">South Corea</option>
-										</select>
-									</div>
-									<button type="submit" class="btn btn-primary btn-block">Guardar</button>
-								</form>
+								</div>
 							</div>
-						</div>
+							<div class="row">
+								<div class="col-md">
+									<div class="form-group">
+										<label for="email">Email</label>
+										<input type="email" class="form-control" name="email" id="email" value="eduardo.zenteno@americaasia.org">
+									</div>
+								</div>
+								<div class="col-md">
+									<div class="form-group">
+										<label for="empresa">Empresa</label>
+										<input type="text" class="form-control" name="empresa" id="empresa" value="America Asia">
+									</div>
+								</div>
+							</div>
+							<hr>
+							<h5>Cambiar contraseña</h5>
+							<div class="form-group">
+								<label for="empresa">Contraseña</label>
+								<input type="password" class="form-control" name="password" id="password">
+							</div>
+							<div class="text-right">
+								<button type="submit" class="btn btn-primary">Guardar</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>

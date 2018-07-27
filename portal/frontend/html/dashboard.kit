@@ -5,7 +5,23 @@
 		<div class="container-fluid pl-0 pr-0">
 			<div class="row no-gutters">
 				<div class="col-sm-3 pt-4 pb-4 sidebar">
-					<!-- @import "inc/sidebar.kit" -->
+					<nav class="nav flex-column">
+						<a class="nav-link active" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-border-all"></use></svg> Dashboard
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-pin"></use></svg> Experiencias
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-inbox-check"></use></svg> Órdenes
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-ticket"></use></svg> Check-In
+						</a>
+						<a class="nav-link" href="#">
+							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-chat-bubble-dots"></use></svg> Comentarios
+						</a>
+					</nav>
 				</div>
 				<div class="col-sm-9 pt-4">
 					<div class="main__content">
@@ -72,36 +88,38 @@
 							</div>
 						</div>
 						<h3 class="text-primary">Órdenes Recientes</h3>
-						<table class="table table-striped mb-4">
-						  <thead>
-						    <tr>
-						      <th scope="col">Estatus</th>
-						      <th scope="col">Órden</th>
-						      <th scope="col">Fecha</th>
-						      <th scope="col">Total</th>
-						    </tr>
-						  </thead>
-						  <tbody>
-						    <tr>
-						      <th scope="row"><span class="badge badge-success">Completado</span></th>
-						      <td>#121 por Jesús Granados</td>
-						      <td>01/12/2018 13:30</td>
-						      <td>$1,200</td>
-						    </tr>
-						    <tr>
-						      <th scope="row"><span class="badge badge-warning">Procesado</span></th>
-						      <td>#122 por Eduardo Zenteno</td>
-						      <td>01/12/2018 13:30</td>
-						      <td>$1,200</td>
-						    </tr>
-						    <tr>
-						      <th scope="row"><span class="badge badge-danger">Cancelado</span></th>
-						      <td>#123 por Jesús Granados</td>
-						      <td>01/12/2018 13:30</td>
-						      <td>$1,200</td>
-						    </tr>
-						  </tbody>
-						</table>
+						<div class="table-responsive">
+							<table class="table table-striped mb-4">
+							  <thead>
+							    <tr>
+							      <th scope="col">Estatus</th>
+							      <th scope="col">Órden</th>
+							      <th scope="col">Fecha</th>
+							      <th scope="col">Total</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <th scope="row"><span class="badge badge-success">Completado</span></th>
+							      <td>#121 por Jesús Granados</td>
+							      <td>01/12/2018 13:30</td>
+							      <td>$1,200</td>
+							    </tr>
+							    <tr>
+							      <th scope="row"><span class="badge badge-warning">Procesado</span></th>
+							      <td>#122 por Eduardo Zenteno</td>
+							      <td>01/12/2018 13:30</td>
+							      <td>$1,200</td>
+							    </tr>
+							    <tr>
+							      <th scope="row"><span class="badge badge-danger">Cancelado</span></th>
+							      <td>#123 por Jesús Granados</td>
+							      <td>01/12/2018 13:30</td>
+							      <td>$1,200</td>
+							    </tr>
+							  </tbody>
+							</table>
+						</div>
 						<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 						<script src="../js/utils.js"></script>
 						<script>

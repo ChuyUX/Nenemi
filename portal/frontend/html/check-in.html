@@ -46,51 +46,83 @@
 			<div class="row no-gutters">
 				<div class="col-sm-3 pt-4 pb-4 sidebar">
 					<nav class="nav flex-column">
-					  <a class="nav-link" href="#">
+						<a class="nav-link" href="#">
 							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-border-all"></use></svg> Dashboard
 						</a>
-					  <a class="nav-link active" href="#">
+						<a class="nav-link" href="#">
 							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-pin"></use></svg> Experiencias
 						</a>
-					  <a class="nav-link" href="#">
+						<a class="nav-link" href="#">
 							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-inbox-check"></use></svg> Órdenes
 						</a>
-					  <a class="nav-link" href="#">
+						<a class="nav-link" href="#">
 							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-ticket"></use></svg> Check-In
 						</a>
 						<a class="nav-link" href="#">
 							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-chat-bubble-dots"></use></svg> Comentarios
 						</a>
 					</nav>
+					
 				</div>
 				<div class="col-sm-9 pt-4">
 					<div class="main__content">
-						<h3>Experiencias</h3>
-						<a href="#" class="btn btn-outline-primary btn-sm mb-4">Agregar nueva</a>
-						<table id="table_exp" class="table table-striped">
-					    <thead>
-					        <tr>
-					            <th>Título</th>
-					            <th>Categoría</th>
-											<th>Ciudad</th>
-											<th>Fecha</th>
-					        </tr>
-					    </thead>
-					    <tbody>
-					        <tr>
-					            <td>Exploring Mexico City</td>
-					            <td>Hotel</td>
-											<td>Mexico City</td>
-											<td>28/03/2018</td>
-					        </tr>
-									<tr>
-					            <td>Carne asada en Monterrey</td>
-					            <td>Restaurant</td>
-											<td>Monterrey</td>
-											<td>28/03/2018</td>
-					        </tr>
-					    </tbody>
-						</table>
+						<h3>Check-In</h3>
+						<p>Busca la órden por número de órden o escanea el cógido QR</p>
+						<div class="row pt-3 pb-3">
+							<div class="col-md-7">
+								<label>Buscar órden:</label>
+								<form class="form-inline mb-4">
+								  <label class="sr-only" for="num_orden">Name</label>
+								  <input type="text" class="form-control mb-2 mr-sm-2" id="num_orden" placeholder="Número de órden">
+								  <button type="submit" class="btn btn-secondary btn-block col-sm-4 mb-2">Submit</button>
+								</form>
+								<div style="display:none;">
+									<div class="table-responsive">
+										<table class="table">
+											<thead>
+												<tr>
+													<th>Órden</th>
+													<th>Fecha</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>#121 por Jesús Granados</td>
+													<td>01/12/2018 13:30</td>
+													<td>
+														<a href="#" class="btn btn-outline-primary btn-sm">Check-In</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="alert alert-success" role="alert">
+									  A simple success alert—check it out!
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<label>Escanear QR:</label><br>
+								<a href="#qr_reader" class="btn btn-secondary btn-block col-sm-6 mb-4" data-toggle="collapse">Escanear</a>
+								<div class="collapse" id="qr_reader">
+									<video id="preview" class="img-fluid"></video>
+								</div>
+								<div id="checkin_modal" class="blue-popup-block mfp-hide">
+									<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+									<div class="text-center text-white">
+										<h5 class="mb-0 text-white">Órden</h5>
+										<p>#123</p>
+										<h5 class="mb-0 text-white">Cliente</h5>
+										<p>Jesús Granados</p>
+										<h5 class="mb-0 text-white">Fecha</h5>
+										<p>01/12/2018 13:30</p>
+										<button class="btn btn-primary">Check-In</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</div>
 			</div>
@@ -111,6 +143,28 @@
 	<script src="../js/tempusdominus-bootstrap-4.min.js"></script>
 	<script src="../js/dropzone.js"></script>
 	<script src="../js/datatables.min.js"></script>
+	<script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+	<script type="text/javascript">
+		let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+		scanner.addListener('scan', function (content) {
+			$.magnificPopup.open({
+		    items: {
+		    	src: '#checkin_modal'
+		    },
+		    type: 'inline',
+		    modal: true
+	    });
+		});
+		Instascan.Camera.getCameras().then(function (cameras) {
+			if (cameras.length > 0) {
+				scanner.start(cameras[0]);
+			} else {
+				console.error('No cameras found.');
+			}
+		}).catch(function (e) {
+			console.error(e);
+		});
+	</script>
 	<script src="../js/scripts.js"></script>
 	</body>
 	</html>

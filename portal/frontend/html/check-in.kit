@@ -1,0 +1,74 @@
+<!-- @import "inc/head.kit" -->
+<body>
+	<!-- @import "inc/header.kit" -->
+	<main>
+		<div class="container-fluid pl-0 pr-0">
+			<div class="row no-gutters">
+				<div class="col-sm-3 pt-4 pb-4 sidebar">
+					<!-- @import "inc/sidebar.kit" -->
+				</div>
+				<div class="col-sm-9 pt-4">
+					<div class="main__content">
+						<h3>Check-In</h3>
+						<p>Busca la órden por número de órden o escanea el cógido QR</p>
+						<div class="row pt-3 pb-3">
+							<div class="col-md-7">
+								<label>Buscar órden:</label>
+								<form class="form-inline mb-4">
+								  <label class="sr-only" for="num_orden">Name</label>
+								  <input type="text" class="form-control mb-2 mr-sm-2" id="num_orden" placeholder="Número de órden">
+								  <button type="submit" class="btn btn-secondary btn-block col-sm-4 mb-2">Submit</button>
+								</form>
+								<div style="display:none;">
+									<div class="table-responsive">
+										<table class="table">
+											<thead>
+												<tr>
+													<th>Órden</th>
+													<th>Fecha</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>#121 por Jesús Granados</td>
+													<td>01/12/2018 13:30</td>
+													<td>
+														<a href="#" class="btn btn-outline-primary btn-sm">Check-In</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="alert alert-success" role="alert">
+									  A simple success alert—check it out!
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<label>Escanear QR:</label><br>
+								<a href="#qr_reader" class="btn btn-secondary btn-block col-sm-6 mb-4" data-toggle="collapse">Escanear</a>
+								<div class="collapse" id="qr_reader">
+									<video id="preview" class="img-fluid"></video>
+								</div>
+								<div id="checkin_modal" class="blue-popup-block mfp-hide">
+									<button title="Close (Esc)" type="button" class="mfp-close">×</button>
+									<div class="text-center text-white">
+										<h5 class="mb-0 text-white">Órden</h5>
+										<p>#123</p>
+										<h5 class="mb-0 text-white">Cliente</h5>
+										<p>Jesús Granados</p>
+										<h5 class="mb-0 text-white">Fecha</h5>
+										<p>01/12/2018 13:30</p>
+										<button class="btn btn-primary">Check-In</button>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<!-- @import "inc/footer-checkin.kit" -->

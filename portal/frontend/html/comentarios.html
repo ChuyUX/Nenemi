@@ -49,7 +49,7 @@
 					  <a class="nav-link" href="#">
 							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-border-all"></use></svg> Dashboard
 						</a>
-					  <a class="nav-link active" href="#">
+					  <a class="nav-link" href="#">
 							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-pin"></use></svg> Experiencias
 						</a>
 					  <a class="nav-link" href="#">
@@ -58,39 +58,82 @@
 					  <a class="nav-link" href="#">
 							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-ticket"></use></svg> Check-In
 						</a>
-						<a class="nav-link" href="#">
+						<a class="nav-link active" href="#">
 							<svg class="icon"><use xlink:href="../img/symbol-defs.svg#icon-chat-bubble-dots"></use></svg> Comentarios
 						</a>
 					</nav>
 				</div>
 				<div class="col-sm-9 pt-4">
 					<div class="main__content">
-						<h3>Experiencias</h3>
-						<a href="#" class="btn btn-outline-primary btn-sm mb-4">Agregar nueva</a>
-						<table id="table_exp" class="table table-striped">
-					    <thead>
-					        <tr>
-					            <th>Título</th>
-					            <th>Categoría</th>
-											<th>Ciudad</th>
-											<th>Fecha</th>
-					        </tr>
-					    </thead>
-					    <tbody>
-					        <tr>
-					            <td>Exploring Mexico City</td>
-					            <td>Hotel</td>
-											<td>Mexico City</td>
-											<td>28/03/2018</td>
-					        </tr>
-									<tr>
-					            <td>Carne asada en Monterrey</td>
-					            <td>Restaurant</td>
-											<td>Monterrey</td>
-											<td>28/03/2018</td>
-					        </tr>
-					    </tbody>
-						</table>
+						<h3>Comentarios</h3>
+						<div class="table-responsive">
+							<table id="table_orders" class="table table-striped">
+						    <thead>
+						        <tr>
+						            <th>Usuario</th>
+						            <th>Comentario</th>
+						        </tr>
+						    </thead>
+						    <tbody>
+						        <tr class="unread">
+					            <td>
+												<div class="review__header mb-0">
+													<img src="../img/dummy/review-avatar-108x108.jpg" class="review__thumbnail" alt="Dae-Jung Kong">
+													<div class="review__meta">
+														<p class="mb-0 font-weight-bold">Dae-Jung Kong</p>
+														<p class="mb-0 small">21 March, 2018</p>
+													</div>
+												</div>
+					            </td>
+					            <td>
+												<h5 class="mb-0">Exploring Mexico City</h5>
+					            	<p>Adrenalina, super nice ride, i realy enjoyed. I was scary but was fun and the 2 pilots make it fun and nice. They make jokes and you can relax. I love it.</p>
+												<div class="text-right mb-3">
+													<a href="#comment_0" class="btn btn-outline-primary btn-sm" data-toggle="collapse">Responder</a>
+												</div>
+												<div class="collapse" id="comment_0">
+													<form action="#">
+														<div class="mb-3">
+															<textarea class="form-control" name="reply" rows="3" cols="80" placeholder="Escribe la respuesta al comentario"></textarea>
+														</div>
+														<div class="text-right">
+															<button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+														</div>
+													</form>
+												</div>
+					            </td>
+						        </tr>
+										<tr>
+					            <td>
+												<div class="review__header mb-0">
+													<img src="../img/dummy/review-avatar-108x108.jpg" class="review__thumbnail" alt="Dae-Jung Kong">
+													<div class="review__meta">
+														<p class="mb-0 font-weight-bold">Dae-Jung Kong</p>
+														<p class="mb-0 small">21 March, 2018</p>
+													</div>
+												</div>
+					            </td>
+					            <td>
+												<h5 class="mb-0">Exploring Mexico City</h5>
+					            	<p>Adrenalina, super nice ride, i realy enjoyed. I was scary but was fun and the 2 pilots make it fun and nice. They make jokes and you can relax. I love it.</p>
+												<div class="text-right mb-3">
+													<a href="#comment_1" class="btn btn-outline-primary btn-sm" data-toggle="collapse">Responder</a>
+												</div>
+												<div class="collapse" id="comment_1">
+													<form action="#">
+														<div class="mb-3">
+															<textarea class="form-control" name="reply" rows="3" cols="80" placeholder="Escribe la respuesta al comentario"></textarea>
+														</div>
+														<div class="text-right">
+															<button type="submit" class="btn btn-primary btn-sm">Enviar</button>
+														</div>
+													</form>
+												</div>
+					            </td>
+						        </tr>
+						    </tbody>
+							</table>
+						</div>
 					</div>
 				</div>
 			</div>

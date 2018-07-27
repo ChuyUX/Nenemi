@@ -12,3 +12,9 @@
   position: relative;
   top: 3px;
 }
+
+@include media-breakpoint-up(md) {
+  .sidebar{
+    min-height: calc(100vh - 157px);
+  }
+}

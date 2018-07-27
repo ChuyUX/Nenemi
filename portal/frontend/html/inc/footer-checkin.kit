@@ -1,0 +1,40 @@
+<footer>
+	<div class="container">
+		<div class="text-center footer__bottom">
+			<span class="d-block d-sm-inline-block">®Nenemi 2018. ©All rights reserved.</span>  <span class="d-none d-sm-inline">|</span>  <a href="#">Terms of service</a>.  | <a href="#">Privacy policy</a>.
+		</div>
+	</div>
+</footer>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.magnific-popup.min.js"></script>
+<script src="../js/moment.min.js"></script>
+<script src="../js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="../js/dropzone.js"></script>
+<script src="../js/datatables.min.js"></script>
+<script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+<script type="text/javascript">
+	let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+	scanner.addListener('scan', function (content) {
+		$.magnificPopup.open({
+	    items: {
+	    	src: '#checkin_modal'
+	    },
+	    type: 'inline',
+	    modal: true
+    });
+	});
+	Instascan.Camera.getCameras().then(function (cameras) {
+		if (cameras.length > 0) {
+			scanner.start(cameras[0]);
+		} else {
+			console.error('No cameras found.');
+		}
+	}).catch(function (e) {
+		console.error(e);
+	});
+</script>
+<script src="../js/scripts.js"></script>
+</body>
+</html>

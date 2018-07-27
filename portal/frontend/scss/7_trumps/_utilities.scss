@@ -39,20 +39,6 @@ a.headings-color:hover{
   display: flex;
   flex-wrap: wrap;
 }
-.payment__item{
-  margin-bottom: 50px;
-  padding-left: 32px;
-}
-.payment__item .custom-control-label{
-  font-size: 1.5rem;
-}
-.payment__item .custom-control-label::before,
-.payment__item .custom-control-label::after{
-  top: .5rem;
-}
-.payment__item .custom-control-label img{
-  margin-right: 3px;
-}
 .checklist{
   padding-left: 0;
 }
@@ -73,4 +59,22 @@ a.headings-color:hover{
 }
 .dataTables_wrapper{
   margin-bottom: 50px;
+}
+.table-striped tbody tr.unread:nth-of-type(odd){
+  background: none;
+}
+.unread td{
+  background: rgba(77, 133, 197, 0.15);
+}
+.unread td:first-child{
+  position: relative;
+}
+.unread td:first-child:before{
+  background: $secondary;
+  content: " ";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 2px;
 }
