@@ -101,7 +101,7 @@ $customer_orders = get_posts( apply_filters( 'woocommerce_my_account_my_orders_q
 										<div class="text-center">
 										<h4 class="text-white"><?php _e('Scan QR code', 'nenemi-bookings'); ?></h4>
 										<div class="d-inline-block bg-white p-3">
-											<img src="<?php echo get_template_directory_uri(); ?>/img/dummy/qr.jpg" alt="">
+											<img src="https://chart.googleapis.com/chart?chs=220x220&cht=qr&chl=<?php echo $order->id; ?>&choe=UTF-8" alt="">
 										</div>
 										</div>
 									</div>
